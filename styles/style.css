@@ -730,9 +730,9 @@ header {
     position: fixed;
     
     z-index: 1;
-    left: -20%;
+    left: 10%;
     top: 30%;
-    width: 100%;
+    width: 80%;
    
   
     height: 100%;
@@ -766,14 +766,16 @@ header {
 }
 
 .call-button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
     padding: 15px 20px;
     margin: 5px 0;
     border: none;
     cursor: pointer;
     width: 100%;
     font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 @media (min-width: 768px)  {
