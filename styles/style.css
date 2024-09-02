@@ -683,7 +683,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    box-shadow: 0 -2px 1px rgba(215, 11, 113, 0.5);
+    box-shadow: 0 -2px 1px rgba(255, 16, 16, 0.038);
 }
 
 .bottom-social-icons .icon {
