@@ -43,6 +43,7 @@ body{
 /* Header Styles */
 header {
 
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +52,8 @@ header {
     color: #000000;
     position: fixed !important;
     top: 0 !important ;
-    z-index: 20 !important ;
+    z-index: 200 !important ;
+    overflow: hidden;
 }
 
 .left ul.main {
