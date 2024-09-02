@@ -846,10 +846,6 @@ header {
 }
 
 
-.icon a,
-.icon a img {
-    pointer-events: auto; /* Ensure the elements are clickable */
-}
 
 
 

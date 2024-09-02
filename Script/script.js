@@ -17,18 +17,20 @@
       modal.style.display = "none";
   }
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
+
 
   // Function to trigger the call
   function callNumber(number) {
       window.location.href = `tel:${number}`;
   }
 
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 
