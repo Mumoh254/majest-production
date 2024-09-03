@@ -308,6 +308,14 @@ header {
      align-items: center;
      flex-direction: column;
 }
+.price-tag{
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .products_star   i  {
     color: rgb(116, 193, 116);
     font-size: 8px;
@@ -316,9 +324,10 @@ header {
 .price .del{
 color:  black ;
 }
+.price,
  .span {
-    color: red;
-    font-weight: 700;
+    color: rgba(26, 27, 25, 0.462);
+    font-weight: 400;
     letter-spacing: 1px;
 
 }
