@@ -353,6 +353,7 @@ header {
     .products {
        
         width: 100%;
+       
     }
 
     .products .box {
@@ -366,13 +367,14 @@ header {
     }
 
     .products .box .card {
-        width: 180px !important;
-        height: 360px;
+        width: 190px !important;
+        height: 300px !important;
       
     }
 
     .products .box .card .image img {
-        width: 120px;
+        width: auto;
+        height: 100px;
     }
 
     .products .box .card .products_text h2 {
