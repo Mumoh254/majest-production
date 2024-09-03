@@ -38,7 +38,7 @@
 
   function showModal(imgElement) {
       // Set the current image URL
-      currentImageUrl = imgElement.getAttribute('data-src');
+      currentImageUrl = imgElement.getAttribute('src');
       document.getElementById('buyNowModal').style.display = 'block';
   }
 
