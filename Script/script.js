@@ -39,7 +39,7 @@
     const imageUrl = new URL(document.getElementById('productImage').getAttribute('src'), window.location.origin).href;
 
     // Construct the WhatsApp message
-    const message = `I'm interested in the ${productName} priced at ${productPrice}. You can view the product image here: ${imageUrl}`;
+    const message = ` Hello ,  I'm interested in the ${productName} priced at ${productPrice}.  from majesty  shoe  collections You can view the product image i'm interested  in  here: ${imageUrl} Please let me know how to proceed. Thank you! `;
 
     // Encode the message
     const encodedMessage = encodeURIComponent(message);
