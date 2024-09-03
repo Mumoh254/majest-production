@@ -31,41 +31,4 @@
 
 
 
-  let currentImageUrl = ''; // Global variable to store current image URL
 
-  function showModal(imgElement) {
-      // Get the relative image URL
-      const relativeImageUrl = imgElement.getAttribute('src');
-      
-      // Convert the relative image URL to an absolute URL
-      currentImageUrl = new URL(relativeImageUrl, window.location.href).href;
-  
-      // Display the modal
-      document.getElementById('buyNowModal').style.display = 'block';
-  }
-  
-  function closeModal() {
-      // Hide the modal
-      document.getElementById('buyNowModal').style.display = 'none';
-  }
-  
-  function redirectToWhatsApp() {
-      // Get the product details
-      const productName = document.querySelector('.product-title.product-name').textContent;
-      const productPrice = document.querySelector('.product-price.span').textContent;
-  
-      // Construct the WhatsApp message
-      const message = `Hello, I'm interested in the ${productName} priced at ${productPrice} from Majesty Shoe Collections. You can view the product image I'm interested in here: ${currentImageUrl}. Please let me know how to proceed. Thank you!`;
-  
-      // Encode the message
-      const encodedMessage = encodeURIComponent(message);
-  
-      // WhatsApp number (replace with the actual number)
-      const whatsappNumber = '254740045355';
-  
-      // Construct the WhatsApp URL
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-  
-      // Redirect to WhatsApp
-      window.location.href = whatsappUrl;
-  }
