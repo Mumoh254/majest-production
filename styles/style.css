@@ -215,7 +215,7 @@ header {
     border-radius: 5px;
     text-align: center;
     padding: 10px 20px;
-    background: #f6f6f6;
+    background: #ffffff;
    
 }
 
@@ -227,13 +227,14 @@ header {
     transform: translateX(-20px);
     transition: 0.3s;
     opacity: 0;
+   
 }
 
-.products .box .card:hover .small_card{
-    transform: translateX(2px);
+.products .box .card .small_card{
+
     cursor: pointer;
-    opacity: 1;
-}
+    opacity: 9;
+} 
 
 .products .box .card .image{
     display: flex;
