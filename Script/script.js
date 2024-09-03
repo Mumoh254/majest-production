@@ -30,31 +30,27 @@
   }
 
 
-
-
   function redirectToWhatsApp() {
     // Get the product details
     const productName = document.querySelector('.product-title').textContent;
     const productPrice = document.querySelector('.product-price').textContent;
-    
-    // Get the image URL
-    const imageUrl = window.location.origin + document.getElementById('productImage').getAttribute('src');
-    
+
+    // Construct the absolute URL for the image
+    const imageUrl = new URL(document.getElementById('productImage').getAttribute('src'), window.location.origin).href;
+
     // Construct the WhatsApp message
     const message = `I'm interested in the ${productName} priced at ${productPrice}. You can view the product image here: ${imageUrl}`;
-    
+
     // Encode the message
     const encodedMessage = encodeURIComponent(message);
-    
+
     // WhatsApp number (replace with the actual number)
     const whatsappNumber = '254740045355';
-    
+
     // Construct the WhatsApp URL
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    
+
     // Redirect to WhatsApp
     window.location.href = whatsappUrl;
 }
-
-
 
