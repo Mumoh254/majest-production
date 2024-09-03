@@ -319,6 +319,27 @@ header {
     flex-direction: column;
 }
 
+
+
+
+.shop-button {
+    display: inline-block;
+    padding: 8px 16px; /* Smaller padding for a smaller button */
+    font-size: 14px; /* Smaller font size */
+    color: white;
+    background-color: #25D366; /* WhatsApp green */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: #1EBB5A; /* Darker green for hover effect */
+}
+
 /* Mobile view (up to 767px wide) */
 
 
