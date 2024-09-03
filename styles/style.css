@@ -209,9 +209,9 @@ header {
 }
 
 .products .box .card{
-    width: 290px;
-    height: 360px;
-    box-shadow: 0 0 8px #ff1e0a1d;
+    width: 240px;
+    height: 340px;
+    box-shadow: 0 0 8px #1513131d;
     border-radius: 5px;
     text-align: center;
     padding: 10px 20px;
@@ -299,14 +299,21 @@ header {
     font-weight: 300;
     font-size: 10px;
 }
-
+.price {
+   
+    width: 100%;
+    display: flex;
+     column-gap: 10px;
+     justify-content: center;
+     align-items: center;
+}
 .products_star   i  {
-    color: green;
-    font-size: 10px;
+    color: rgb(116, 193, 116);
+    font-size: 8px;
 }
 
 .price .del{
-
+color:  black ;
 }
  .span {
     color: red;
