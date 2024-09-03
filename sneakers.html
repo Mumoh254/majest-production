@@ -66,6 +66,19 @@
      
     <!--Products-->
 
+    
+    <!-- Modal -->
+    <div id="buyNowModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Buy Now</h2>
+            <button class="buy-button" onclick="redirectToWhatsApp()">Buy Now</button>
+        </div>
+    </div>
+
+
+
+    
     <div class="products" id="Products">
 
         <br>
@@ -76,31 +89,26 @@
 
         <div class="box">
 
-               <div class="card">
-
+            <div class="card">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
-                 
                 </div>
-
+        
                 <div class="image">
-                    
-                  
-
-                 <img id="productImage" src="./assets/Images/sneakers/img1.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img id="productImage" src="./assets/Images/sneakers/img1.png" alt="Majesty Shoe Collections Airmax" loading="lazy" onclick="showModal()">
                 </div>
-
-              
+        
                 <div class="product-info">
-                    <span class="product-title product-name">Air max</span>
-                    <div class=" price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="product-price span"> 4000 </span>    
-                    </div>   
-
-                  
+                    <span class="product-title product-name">Air Max</span>
+                    <div class="price">
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                        </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
+                        </div>
+                    </div>
                     <div class="products_star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -108,20 +116,9 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-
                     <br>
-
-                    <button class="shop-button" onclick="redirectToWhatsApp()">Shop Now</button>
-
-                  
-                  </div>
-
-
-
-
+                </div>
             </div>
-
-
 
               <div class="card">
 

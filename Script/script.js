@@ -30,7 +30,22 @@
   }
 
 
-  function redirectToWhatsApp() {
+
+
+
+
+
+
+  
+function showModal() {
+    document.getElementById('buyNowModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('buyNowModal').style.display = 'none';
+}
+
+function redirectToWhatsApp() {
     // Get the product details
     const productName = document.querySelector('.product-title').textContent;
     const productPrice = document.querySelector('.product-price').textContent;
@@ -53,4 +68,3 @@
     // Redirect to WhatsApp
     window.location.href = whatsappUrl;
 }
-
