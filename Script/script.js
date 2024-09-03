@@ -34,37 +34,35 @@
 
 
 
+  let currentImageUrl = ''; // Global variable to store current image URL
 
+  function showModal(imgElement) {
+      // Set the current image URL
+      currentImageUrl = imgElement.getAttribute('data-src');
+      document.getElementById('buyNowModal').style.display = 'block';
+  }
 
-  
-function showModal() {
-    document.getElementById('buyNowModal').style.display = 'block';
-}
+  function closeModal() {
+      document.getElementById('buyNowModal').style.display = 'none';
+  }
 
-function closeModal() {
-    document.getElementById('buyNowModal').style.display = 'none';
-}
+  function redirectToWhatsApp() {
+      // Get the product details
+      const productName = document.querySelector('.product-title.product-name').textContent;
+      const productPrice = document.querySelector('.product-price.span').textContent;
 
-function redirectToWhatsApp() {
-    // Get the product details
-    const productName = document.querySelector('.product-title').textContent;
-    const productPrice = document.querySelector('.product-price').textContent;
+      // Construct the WhatsApp message
+      const message = `Hello, I'm interested in the ${productName} priced at ${productPrice} from Majesty Shoe Collections. You can view the product image I'm interested in here: ${currentImageUrl}. Please let me know how to proceed. Thank you!`;
 
-    // Construct the absolute URL for the image
-    const imageUrl = new URL(document.getElementById('productImage').getAttribute('src'), window.location.origin).href;
+      // Encode the message
+      const encodedMessage = encodeURIComponent(message);
 
-    // Construct the WhatsApp message
-    const message = ` Hello ,  I'm interested in the ${productName} priced at ${productPrice}.  from majesty  shoe  collections You can view the product image i'm interested  in  here: ${imageUrl} Please let me know how to proceed. Thank you! `;
+      // WhatsApp number (replace with the actual number)
+      const whatsappNumber = '254740045355';
 
-    // Encode the message
-    const encodedMessage = encodeURIComponent(message);
+      // Construct the WhatsApp URL
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-    // WhatsApp number (replace with the actual number)
-    const whatsappNumber = '254740045355';
-
-    // Construct the WhatsApp URL
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-    // Redirect to WhatsApp
-    window.location.href = whatsappUrl;
-}
+      // Redirect to WhatsApp
+      window.location.href = whatsappUrl;
+  }
