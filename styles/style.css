@@ -181,12 +181,12 @@ header {
 .products{
     width: 100%;
    
-   
+   height: auto;
 }
 
 .products h1{
     margin: 35px 0;
-    font-size: 60px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,7 +244,7 @@ header {
 
 .products .box .card .image img{
     width: 150px;
-    margin: 15px 0;
+    margin: 5px 0;
     transition: 0.3s;
 }
 
@@ -268,8 +268,9 @@ header {
 }
 
 .products .box .card .products_text h2{
-    font-size: 30px;
+    font-size: 2px ;
     margin-top: 15px;
+    
 }
 
 .products .box .card .products_text p{
@@ -545,11 +546,11 @@ color:  black ;
 /* Discount badge styling */
 .discount-badge {
     display: inline-block;
-    background-color: red;
-    color: #fff;
+    background-color: rgba(255, 0, 0, 0.929);
+    color: #ffffffea;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: bold;
     width: 100%;
 }
