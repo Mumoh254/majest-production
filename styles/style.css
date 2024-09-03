@@ -378,7 +378,13 @@ header {
     }
 
     .products .box .card .products_text h2 {
-        font-size: 25px;
+        font-size: 18px;
+    }
+    .product-info{
+    
+        width: 100% !important;
+        padding: 0;
+        max-height: 190px !important;
     }
 }
 
