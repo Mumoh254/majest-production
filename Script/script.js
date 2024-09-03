@@ -32,13 +32,11 @@
 
 
 
-
-
   let currentImageUrl = ''; // Global variable to store current image URL
 
   function showModal(imgElement) {
       // Set the current image URL
-      currentImageUrl = imgElement.getAttribute('src');
+      currentImageUrl = new URL(imgElement.getAttribute('src'), window.location.origin).href;
       document.getElementById('buyNowModal').style.display = 'block';
   }
 
