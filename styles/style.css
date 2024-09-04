@@ -78,6 +78,11 @@ header {
   
    
 }
+.main li a.visited {
+    color: red !important;
+    font-weight: bold;
+    background: #04e82e;
+}
 
 .logo img {
     max-width: 150px;
