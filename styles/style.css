@@ -407,6 +407,40 @@ color:  black ;
 
 
 
+/* Button styling */
+.dropdown-btn {
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+    display: none;
+    position: relative;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #16110ae3;
+	width: 100%;
+}
+
+/* Color swatch styling */
+.color-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
 
 .card {
     position: relative;

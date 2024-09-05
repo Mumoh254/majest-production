@@ -1,4 +1,14 @@
 
+
+function toggleColors() {
+    var dropdown = document.getElementById("colorDropdown");
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+}
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Get all the links in the navigation menu
     const navLinks = document.querySelectorAll('.main li a');
