@@ -79,6 +79,24 @@
     <!-- Modal -->
 
   <!-- Modal -->
+
+
+
+
+    <div class="products" id="Products">
+
+        <br>
+
+        <h1>Products</h1>
+
+        <br>
+
+
+
+        <div class="box">
+
+
+            <!-- Modal -->
 <div id="productModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -103,7 +121,7 @@
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <div class="shop-now">
-                    <button onclick="sendWhatsAppMessage()">Shop Now</button>
+                    <button onclick="sendWhatsAppMessage()">Buy Now</button>
                 </div>
             </div>
         </div>
@@ -111,25 +129,19 @@
 </div>
 
 
-    <div class="products" id="Products">
-
-        <br>
-
-        <h1>Products</h1>
-
-        <br>
 
 
 
-        <div class="box">
             
         <!-- Product Card Template -->
-<div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker6.png', ['Red', 'Blue', 'Green', 'Black'])">
+
+        
+<div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker1.png', ['Red', 'Blue', 'Green', 'Black'])">
     <div class="small_card">
         <span class="discount-badge">50% OFF</span>
     </div>
     <div class="image">
-        <img src="./assets/Images/sneakers/sneaker6.png" alt="Air Max" loading="lazy">
+        <img src="./assets/Images/sneakers/sneaker1.png" alt="Air Max" loading="lazy">
     </div>
     <div class="product-info">
         <span class="product-title product-name">Air Max</span>
@@ -156,58 +168,48 @@
 
 
 
-            Modal for Product 1 -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal1')">&times;</span>
-                    <div class="modal-body">
-                        <div class="image">
-                            <img src="./assets/Images/sneakers/sneaker6.png" alt="Air Max" loading="lazy">
+
+            !-- Product Card Example -->
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker2.png', ['red', 'blue', 'green', 'black'])">
+                <div class="small_card">
+                    <span class="discount-badge">50% OFF</span>
+                </div>
+                <div class="image">
+                    <img src="./assets/Images/sneakers/sneaker2.png" alt="Air Max" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <span class="product-title product-name">Air Max</span>
+                    <div class="price">
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
                         </div>
-                        <div class="product-info">
-                            <h2>Air Max</h2>
-                            <p><strong>Sizes:</strong> 37 - 38</p>
-                            <p><strong>Original Price:</strong> <del>8000</del></p>
-                            <p><strong>Discounted Price:</strong> 4000</p>
-                            <p><strong>Available Colors:</strong></p>
-                            <div class="colors">
-                                <div class="color-swatch" style="background-color: red;"></div>
-                                <div class="color-swatch" style="background-color: blue;"></div>
-                                <div class="color-swatch" style="background-color: green;"></div>
-                                <div class="color-swatch" style="background-color: black;"></div>
-                            </div>
-                            <p><strong>Rating:</strong></p>
-                            <div class="products_star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="sale-info">
-                                <div class="sale-tag">On Sale - 50% Off!</div>
-                                <div class="sale-up-to">Sale Up To 30th September 2024</div>
-                            </div>
-                            <div class="shop-now">
-                                <button>Shop Now</button>
-                            </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
                         </div>
+                    </div>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
             </div>
 
 
 
-           <div class="card">
+
+
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker3.png', ['Red', 'Blue', 'Green', 'Black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
                 </div>
-        
                 <div class="image">
-
-                    <img src="./assets/Images/sneakers/sneaker2.png" alt="Air max" loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air Max" loading="lazy">
                 </div>
-        
                 <div class="product-info">
                     <span class="product-title product-name">Air Max</span>
                     <div class="price">
@@ -230,52 +232,17 @@
                 </div>
             </div>
 
-            <div class="card">
+
+
+
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker6.png', ['Red', 'Blue', 'Green', 'Black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
                 </div>
-        
                 <div class="image">
-
-                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air max" loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker6.png" alt="Air Max" loading="lazy">
                 </div>
-        
-                <div class="product-info">
-                    <span class="product-title product-name">Air Max</span>
-                    <div class="price">
-                        <div class="foot-prints">
-                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
-                        </div>
-                        <div class="price-tag">
-                            <del class="del">6000</del>
-                            <span class="product-price span">4000</span>
-                        </div>
-                    </div>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <br>
-                </div>
-            </div>
-
-
-
-
-
-
-            <div class="card">
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                </div>
-        
-                <div class="image">
-                    <img src="./assets/Images/sneakers/sneaker6.png" alt="Air max" loading="lazy">
-                </div>
-        
                 <div class="product-info">
                     <span class="product-title product-name">Air Max</span>
                     <div class="price">
@@ -297,7 +264,6 @@
                     <br>
                 </div>
             </div>
-
 
 
             <div class="card">
