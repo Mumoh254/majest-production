@@ -77,8 +77,11 @@
 /* For screens smaller than 768px (tablets and mobile devices) */
 @media only screen and (max-width: 768px) {
     .modal-content {
-        width: 100%;
-        margin: 1% auto;
+        width: 75% !important;
+        height: 80vh  !important;
+      
+      
+       
     }
     
     .modal-body {
@@ -87,7 +90,8 @@
     }
 
     .modal-body img {
-        width: 90%; /* Scale down the image */
+        width: 95%; 
+       
     }
 }
 
