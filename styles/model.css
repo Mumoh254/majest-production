@@ -14,11 +14,11 @@
 /* Modal Content */
 .modal-content {
 
-    margin: 10% auto;
-    padding: 20px;
+    margin: 5% auto;
+    padding: 10px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 600px;
+    max-width: 700px;
     border-radius: 10px;
     box-sizing: border-box;
     z-index: 20;
@@ -29,7 +29,7 @@
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: bold;
 }
 
