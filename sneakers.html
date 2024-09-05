@@ -70,21 +70,45 @@
     <!--    product   model   -->
     <div class="container">
 
-        
+
 
 
     </div>
  
     
     <!-- Modal -->
-    <div id="buyNowModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2>Buy Now</h2>
-            <button class="buy-button" onclick="redirectToWhatsApp()">Buy Now</button>
+
+  <!-- Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <div class="image">
+                <img id="modalImage" src="" alt="Product Image" loading="lazy">
+            </div>
+            <div class="product-info">
+                <h2 id="modalProductName"></h2>
+                <p><strong>Sizes:</strong></p>
+                <select id="productSize"></select>
+                <p><strong>Original Price:</strong> <del id="originalPrice"></del></p>
+                <p><strong>Discounted Price:</strong> <span id="discountedPrice"></span></p>
+                <p><strong>Available Colors:</strong></p>
+                <select id="productColor"></select>
+                <p><strong>Rating:</strong></p>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="shop-now">
+                    <button onclick="sendWhatsAppMessage()">Shop Now</button>
+                </div>
+            </div>
         </div>
     </div>
-
+</div>
 
 
     <div class="products" id="Products">
@@ -99,38 +123,80 @@
 
         <div class="box">
             
+        <!-- Product Card Template -->
+<div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker6.png', ['Red', 'Blue', 'Green', 'Black'])">
+    <div class="small_card">
+        <span class="discount-badge">50% OFF</span>
+    </div>
+    <div class="image">
+        <img src="./assets/Images/sneakers/sneaker6.png" alt="Air Max" loading="lazy">
+    </div>
+    <div class="product-info">
+        <span class="product-title product-name">Air Max</span>
+        <div class="price">
+            <div class="foot-prints">
+                <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+            </div>
+            <div class="price-tag">
+                <del class="del">8000</del>
+                <span class="product-price span">4000</span>
+            </div>
+        </div>
+        <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <br>
+    </div>
+</div>
+            <!-- 
 
-            <div class="card">  
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                </div>
-        
-                <div class="image">
 
-                    <img src="./assets/Images/men/men1.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-        
-                <div class="product-info">
-                    <span class="product-title product-name">Air Max</span>
-                    <div class="price">
-                        <div class="foot-prints">
-                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+
+            Modal for Product 1 -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <div class="modal-body">
+                        <div class="image">
+                            <img src="./assets/Images/sneakers/sneaker6.png" alt="Air Max" loading="lazy">
                         </div>
-                        <div class="price-tag">
-                            <del class="del">8000</del>
-                            <span class="product-price span">4000</span>
+                        <div class="product-info">
+                            <h2>Air Max</h2>
+                            <p><strong>Sizes:</strong> 37 - 38</p>
+                            <p><strong>Original Price:</strong> <del>8000</del></p>
+                            <p><strong>Discounted Price:</strong> 4000</p>
+                            <p><strong>Available Colors:</strong></p>
+                            <div class="colors">
+                                <div class="color-swatch" style="background-color: red;"></div>
+                                <div class="color-swatch" style="background-color: blue;"></div>
+                                <div class="color-swatch" style="background-color: green;"></div>
+                                <div class="color-swatch" style="background-color: black;"></div>
+                            </div>
+                            <p><strong>Rating:</strong></p>
+                            <div class="products_star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="sale-info">
+                                <div class="sale-tag">On Sale - 50% Off!</div>
+                                <div class="sale-up-to">Sale Up To 30th September 2024</div>
+                            </div>
+                            <div class="shop-now">
+                                <button>Shop Now</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <br>
                 </div>
             </div>
+
+
 
            <div class="card">
                 <div class="small_card">
@@ -139,7 +205,7 @@
         
                 <div class="image">
 
-                    <img src="./assets/Images/men/men2.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker2.png" alt="Air max" loading="lazy">
                 </div>
         
                 <div class="product-info">
@@ -171,7 +237,7 @@
         
                 <div class="image">
 
-                    <img src="./assets/Images/men/men3.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air max" loading="lazy">
                 </div>
         
                 <div class="product-info">
@@ -196,69 +262,10 @@
                 </div>
             </div>
 
-            <div class="card">
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                </div>
-        
-                <div class="image">
-                    <img src="./assets/Images/men/men4.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >         <img id="productImage" src="./assets/Images/sneakers/img4.png" alt="Majesty Shoe Collections Airmax" loading="lazy" onclick="showModal()">
-                </div>
-        
-                <div class="product-info">
-                    <span class="product-title product-name">Air Max</span>
-                    <div class="price">
-                        <div class="foot-prints">
-                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
-                        </div>
-                        <div class="price-tag">
-                            <del class="del">8000</del>
-                            <span class="product-price span">4000</span>
-                        </div>
-                    </div>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <br>
-                </div>
-            </div>
 
 
-           <div class="card">
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                </div>
-        
-                <div class="image">
 
-                    <img src="./assets/Images/men/men5.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-        
-                <div class="product-info">
-                    <span class="product-title product-name">Air Max</span>
-                    <div class="price">
-                        <div class="foot-prints">
-                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
-                        </div>
-                        <div class="price-tag">
-                            <del class="del">8000</del>
-                            <span class="product-price span">4000</span>
-                        </div>
-                    </div>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <br>
-                </div>
-            </div>
+
 
             <div class="card">
                 <div class="small_card">
@@ -266,8 +273,7 @@
                 </div>
         
                 <div class="image">
-
-                    <img src="./assets/Images/men/men6.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker6.png" alt="Air max" loading="lazy">
                 </div>
         
                 <div class="product-info">
@@ -301,7 +307,7 @@
                 <div class="image">
                     
               
-                    <img src="./assets/Images/men/men7.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker7.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -343,7 +349,7 @@
                     
                
 
-                    <img src="./assets/Images/men/men8.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker8.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -387,7 +393,7 @@
                     
                 
 
-                    <img src="./assets/Images/men/men9.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker9.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -411,8 +417,6 @@
 
                   
                   </div>
-
-
 
             </div>
 
@@ -428,7 +432,7 @@
                     
          
 
-                    <img src="./assets/Images/men/men10.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker10.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -469,7 +473,7 @@
                     
                   
 
-                    <img src="./assets/Images/men/men11.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker11.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -510,7 +514,7 @@
                     
                 
 
-                    <img src="./assets/Images/men/men12.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker12.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -551,7 +555,7 @@
                     
         
 
-                    <img src="./assets/Images/men/men13.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker13.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -591,8 +595,7 @@
                 <div class="image">
                     
               
-
-                    <img src="./assets/Images/men/men14.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker14.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -635,7 +638,7 @@
                     
                 
 
-                    <img src="./assets/Images/men/men15.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker15.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -676,7 +679,7 @@
                     
             
 
-                    <img src="./assets/Images/men/men16.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker16.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -716,7 +719,7 @@
                     
                 
 
-                    <img src="./assets/Images/men/men17.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker17.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -757,7 +760,7 @@
                     
                 
 
-                    <img src="./assets/Images/men/men18.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker18.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -798,7 +801,7 @@
                     
                   
 
-                    <img src="./assets/Images/men/men19.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker19.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -838,7 +841,7 @@
                     
                 
 
-                    <img src="./assets/Images/men/men20.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker20.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -879,7 +882,7 @@
                     
                
 
-                    <img src="./assets/Images/sneakers/img27.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker21.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -920,7 +923,7 @@
                     
                  
 
-                    <img src="./assets/Images/sneakers/img28.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker22.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -961,7 +964,7 @@
                     
                  
 
-                    <img src="./assets/Images/sneakers/img29.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker23.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1002,7 +1005,7 @@
                     
                 
 
-                    <img src="./assets/Images/sneakers/img30.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker24.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1043,7 +1046,7 @@
                     
                 
 
-                    <img src="./assets/Images/sneakers/img31.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker25.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1084,7 +1087,7 @@
                     
                 
 
-                    <img src="./assets/Images/sneakers/img32png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker26.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1125,7 +1128,7 @@
                     
                   
 
-                    <img src="./assets/Images/sneakers/img33.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker27.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1166,7 +1169,7 @@
                     
                  
 
-                    <img src="./assets/Images/sneakers/img34.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker28.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1207,7 +1210,7 @@
                     
                 
 
-                    <img src="./assets/Images/sneakers/img35.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker29.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1248,7 +1251,7 @@
                     
               
 
-                    <img src="./assets/Images/sneakers/img36.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker30.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1289,7 +1292,7 @@
                     
                  
 
-                    <img src="./assets/Images/sneakers/img37.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker31.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1329,7 +1332,7 @@
                     
                  
 
-                    <img src="./assets/Images/sneakers/img38png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker32.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1369,7 +1372,7 @@
                     
                
 
-                    <img src="./assets/Images/sneakers/img39.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker33.png" alt="Air max" loading="lazy">
                 </div>
 
               
@@ -1409,7 +1412,7 @@
                     
              
 
-                    <img src="./assets/Images/sneakers/img40.png" alt="majesty shoe  collections Airmax "  loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker34.png" alt="Air max" loading="lazy">
                 </div>
                 <div class="product-info">
                     <span class="product-name">Air max</span>
@@ -1560,6 +1563,8 @@
     </div>
 
     <script  src="/Script/script.js"></script>
+    <script src="/Script/model.js"></script>
+    <script src="/Script/whatsapp.js"></script>
 
     
 </body>

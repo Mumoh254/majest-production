@@ -1009,6 +1009,7 @@ color:  black ;
         align-items: center;
     }
 
+
     .logo img {
         max-width: 100px;
     }
@@ -1051,9 +1052,6 @@ color:  black ;
         text-align: center;
     }
 }
-
-
-
 
 
 /* Modal container */
