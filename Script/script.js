@@ -1,5 +1,7 @@
 
 
+
+
 function toggleColors() {
     var dropdown = document.getElementById("colorDropdown");
     dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";

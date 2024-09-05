@@ -428,6 +428,9 @@ color:  black ;
     border-radius: 5px;
     background-color: #16110ae3;
 	width: 100%;
+    z-index:    30;
+    height:   30px  !important;
+    
 }
 
 /* Color swatch styling */
