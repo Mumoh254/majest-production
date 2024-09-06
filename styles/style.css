@@ -21,26 +21,26 @@ body{
     min-height: 100vh;
 }
 
+:root{
+    --main-color: #ffffff;
+    --light-color:  #333;
+    --red-color: #ff1900;
+    --green-color:  #06b10f;
+    --small-font-size:  1rem;
+    --medium-font-size:  1.3rem;
+    --larger-font-size:  1.7rem;
+    --large-font-size:  2rem;
 
-
+}
+body{
+     font-size: normal;
+     scroll-behavior: smooth;
+}
 
 /*  */
 
 /* Header   -- amin -- styles */
 
-
-.tops {
-    background: #f2f2f2 !important;
-    padding: 1rem;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000000;
-    position: sticky !important;
-    top: 0 !important ;
-    z-index: 20 !important ;
-}
 
 
 /* Header Styles */
@@ -51,7 +51,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #fff; /* Rich Navy */
+    background-color: #ffffff; /* Rich Navy */
     color: #000000;
     position: fixed !important;
     top: 0 !important ;
@@ -71,17 +71,12 @@ header {
 }
 
 .left ul.main li a {
-    color: #050304; /* Bright Yellow */
+    color: var(--light-color); /* Bright Yellow */
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
+    font-size: var(--medium-font-size);
   
    
-}
-.main li a.visited {
-    color: red !important;
-    font-weight: bold;
-    background: #04e82e;
 }
 
 .logo img {
@@ -116,7 +111,7 @@ header {
     color: #fff;
     border-radius: 50%;
     padding: 4px 8px;
-    font-size: 10px;
+    font-size: var(--small-font-size);
 }
 
 
@@ -144,27 +139,15 @@ header {
     margin-bottom: 30px;
   }
   
-  .slider-text h6 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    color: #FF6347;
-    margin-bottom: 10px;
-  }
   
-  .slider-text h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 20px;
-  }
   
   .slider-text p {
     font-size: 1rem;
-    color: #555;
+    color: #333;
     max-width: 600px;
     margin: 0 auto 20px;
     line-height: 1.8;
+    font-size: var(--medium-font-size);
   }
   
   .cetagories {
@@ -175,21 +158,21 @@ header {
   
   .cetagories select, .cetagories a {
     padding: 12px 20px;
-    font-size: 1rem;
+    font-size: var(--small-font-size);
     border: 2px solid #ddd;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #ffffff;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   
   .cetagories select:hover, .cetagories a:hover {
-    border-color: #FF6347;
+    border-color:  var(--red-color);
   }
   
   .cetagories a {
     color: #fff;
-    background-color: #FF6347;
+    background-color: var(--red-color);
     text-decoration: none;
   }
   
@@ -229,7 +212,7 @@ header {
   /* Mobile-friendly adjustments */
   @media (max-width: 767px) {
     .slider-text h2 {
-      font-size: 1.8rem;
+      font-size: var(--medium-font-size);
     }
   
     .slider-text p {
@@ -252,7 +235,7 @@ header {
 
 .products h1{
     margin: 35px 0;
-    font-size: 20px;
+    font-size: var(--medium-font-size);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -262,22 +245,27 @@ header {
     -webkit-text-fill-color: transparent;  
    
 }
-
-.products .box{
-
+.products .box {
     width: 90%;
-    margin: 0 auto;
+   
+    margin: 0 auto; /* Centers the box horizontally */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 25px 0;
-    font-family: web;
-    padding: 25px 0px;
+    grid-template-columns: repeat(4, 1fr); /* Creates a 4-column grid */
+    grid-gap: 25px; /* Sets the gap between items */
+    font-family: 'web'; /* Ensure this font is properly loaded or use a fallback */
+    padding: 25px 0; /* Adjust padding for vertical spacing */
+
+    align-items: center; /* Centers items vertically within the grid cells */
+    justify-items: center; /* Centers items horizontally within the grid cells */
+    text-align: center; /* Optional: centers text within the grid cells */
 }
 
+
 .products .box .card{
+   
     width: 240px;
     height: 340px;
-    box-shadow: 0 0 8px #1513131d;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     border-radius: 5px;
     text-align: center;
     padding: 10px 20px;
@@ -306,11 +294,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
 }
 
 .products .box .card .image img{
-    width: 150px;
-    margin: 5px 0;
+    height: 60%;
+   
+    margin: 1px 0;
     transition: 0.3s;
 }
 
@@ -318,62 +311,24 @@ header {
     transform: scale(1.1);
 }
 
-.products .box .card .small_card i{
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
-    font-size: 18px;
-    margin: 2px 0;
-    line-height: 40px;
-    border: 2px solid #999999;
-    transition: 0.2s;
-}
 
-.products .box .card .small_card i:hover{
-    color: #c72092;
-}
 
-.products .box .card .products_text h2{
-    font-size: 2px ;
-    margin-top: 15px;
-    
-}
 
-.products .box .card .products_text p{
-    color: #91919191;
-    line-height: 21px;
-    margin: 8px 0;
-}
-
-.products .box .card .products_text h3{
-    margin: 7px 0;
-}
-
-.products .box .card .products_text .products_star{
-    color: orange;
-    margin-bottom: 19px;
-    cursor: pointer;
-}
-
-.products .box .card .products_text .btn{
-    text-decoration: none;
-    padding: 10px 20px;
-    background: linear-gradient(to right, #c72092 , #6c14d0);
-    color: white;
-}
 
 .fa-shoe-prints{
-    font-weight: 300;
-    font-size: 10px;
+    font-weight: 400;
+    font-size:   var(--small-font-size);
 }
 .price {
    
     width: 100%;
     display: flex;
-     column-gap: 10px;
+     row-gap: 8px;
      justify-content: center;
      align-items: center;
      flex-direction: column;
+  
+     font-size: var(--small-font-size);
 }
 .price-tag{
    
@@ -384,16 +339,16 @@ header {
     flex-direction: column;
 }
 .products_star   i  {
-    color: rgb(116, 193, 116);
+    color: var(--green-color);
     font-size: 8px;
 }
 
 .price .del{
-color:  black ;
+color:  #333 ;
 }
 .price,
  .span {
-    color: rgba(26, 27, 25, 0.462);
+    color: var(--red-color);
     font-weight: 400;
     letter-spacing: 1px;
 
@@ -407,115 +362,7 @@ color:  black ;
 
 
 
-/* Button styling */
-.dropdown-btn {
-    background-color: #f1f1f1;
-    border: none;
-    cursor: pointer;
-    padding: 2px;
-    font-size: 8px;
-    border-radius: 5px;
-    margin-top: 5px;
-}
 
-/* Dropdown content styling */
-.dropdown-content {
-    display: none;
-    position: relative;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #16110ae3;
-	width: 100%;
-    z-index:    30;
-    height:   30px  !important;
-    
-}
-
-/* Color swatch styling */
-.color-swatch {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-
-
-.card {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    background: #000;
-    height: 100vh;
-}
-
-.card-image {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-
-.modal {
-    display: none; /* Hidden by default */
-    position: relative; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 50%;
-   
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 45px;
-    border: 1px solid #888;
-    width: 60% !important; /* Could be more or less, depending on screen size */
-    max-width: 500px; /* Max width */
-    position: absolute;
-    top: 15%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    left: 25%;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.buy-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #25D366; /* WhatsApp green */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.buy-button:hover {
-    background-color: #1EBB5A; /* Darker green for hover effect */
-}
 /* Mobile view (up to 767px wide) */
 
 
@@ -597,7 +444,7 @@ color:  black ;
     .products .box {
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
-        background: #ea04ff;
+     
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -659,31 +506,35 @@ color:  black ;
 }
 
 .footer {
-    background: #f2f2f2 !important;
+    background: #ffff !important;
     color: #000000;
     padding: 40px 20px;
+    
     font-family: var(--font-family), Arial, sans-serif;
-    font-size: 0.95em;
+    font-size:   var(--small-font-size);
 }
 
 .footer-container {
     display: grid;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 3%;
+    
 }
 
 .footer-title {
-    font-size: 1.3em;
+    font-size:   var(--medium-font-size);
     margin-bottom: 15px;
-    color: #141E46;
+    color: #0000;
 }
 
 .footer-section p {
     font-size: 0.95em;
     line-height: 1.5;
-    color: #141E46;
+    color: #333;
 }
 
 .social-icons {
@@ -693,14 +544,14 @@ color:  black ;
 
 .social-icon {
     display: inline-block;
-    font-size: 1.2em;
-    color: #ff1900;
+    font-size:  var(--small-font-size);
+    color:   var(--red-color);
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #06b10f;
+    color:   var(--green-color);
 }
 
 .subscribe-form {
@@ -711,14 +562,14 @@ color:  black ;
 .subscribe-form input[type="email"] {
     flex: 1;
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 0.5px solid #ddd;
     border-radius: 4px;
 }
 
 .subscribe-form .btn {
     padding: 8px 18px;
-    background-color: #ff1900;
-    color: #fff;
+    background-color:  var(--green-color);
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -726,16 +577,16 @@ color:  black ;
 }
 
 .subscribe-form .btn:hover {
-    background-color: #06b10f;
+    background-color:  var(--red-color);
 }
 
 .footer-bottom {
     margin-top: 10px;
     text-align: center;
     padding: 15px;
-    color: #fff;
-    background: #ff1900;
-    font-size: 0.85em;
+    color: #ffffff;
+    background:   var(--red-color);
+    font-size:   var(--small-font-size);
 }
 
 .footer-bottom p {
@@ -743,14 +594,15 @@ color:  black ;
 }
 
 .map a {
-    color: #ff1900;
+    color:   var(--green-color);
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
+    font-size:   var(--medium-font-size);
+    font-weight: 600;
 }
 
 .copy-right {
     margin-bottom: 3rem;
+    color: #ffffff;
 }
 
 /* Tablets (768px - 1024px) */
@@ -942,10 +794,10 @@ color:  black ;
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #ffff;
     margin: 15% auto;
     padding: 20px;
-    border: 0.5px solid #3333332f;
+    border: 0.5px solid #333;
     width: 80%;
     max-width: 300px;
     border-radius: 10px;
@@ -954,7 +806,7 @@ color:  black ;
 }
 
 .close {
-    color: #aaa;
+    color: #333;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -970,8 +822,8 @@ color:  black ;
 
 .call-button {
     font-family: "poppins";
-    background-color: #04692e;
-    color: rgb(255, 255, 255);
+    background-color:  #06b10f;
+    color:   #ffffff;
     padding: 15px 20px;
     margin: 5px 0;
     border-radius: 5px;
@@ -1049,68 +901,4 @@ color:  black ;
 
 
 /* Modal container */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-   
-    height: 90%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0); /* Black background with opacity */
-}
 
-/* Modal content box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px  5px;
-    border: 0.5px solid #33333328;
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-/* Close button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Modal image */
-.modal-image {
-    width: 50%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-/* CTA Button */
-.cta-button {
-    background-color: #25d366;
-    color: white;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #1ebd50;
-}

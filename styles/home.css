@@ -1,3 +1,42 @@
+
+/*   external   fonts   */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'web';
+    src: url('/assets/fonts/Chopin_Trial/Trial/WEB/Chopin-Trial-Light.woff') format('woff2');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fira sans";
+}
+
+body{
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+:root{
+    --main-color: #ffffff;
+    --light-color:  #333;
+    --red-color: #ff1900;
+    --green-color:  #06b10f;
+    --small-font-size:  1rem;
+    --medium-font-size:  1.3rem;
+    --larger-font-size:  1.7rem;
+    --large-font-size:  2rem;
+
+}
+body{
+     font-size: normal;
+     scroll-behavior: smooth;
+}
+
 .product-card-container {
     display: flex;
     flex-wrap: wrap;
@@ -6,10 +45,10 @@
 }
 
 .product-card {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 20px;
     width: 80%;
     transition: transform 0.3s ease;
@@ -30,46 +69,46 @@
 }
 
 .product-name {
-    font-size: 1.5rem;
-    color: #333;
+    font-size:   var(--medium-font-size);
+    color:  var(--light-color);
     margin: 10px 0;
 }
 
 .product-price {
-    color: #e74c3c;
+    color:  var(--red-color);
     font-size: 1.25rem;
     font-weight: bold;
 }
 
 .product-old-price {
     text-decoration: line-through;
-    color: #888;
+    color: #333;
     margin-left: 10px;
-    font-size: 1rem;
+    font-size:  var(--small-font-size);
 }
 
 .product-discount {
-    color: green;
-    font-size: 0.9rem;
-    font-weight: bold;
+    color:   var(--green-color);
+    font-size:   var(--small-font-size);
+    font-weight:   400;
     margin-top: 5px;
 }
 
 .buy-now-btn {
     display: block;
     text-align: center;
-    background-color: #2ecc71;
-    color: white;
+    background-color:    var(--green-color);
+    color:   #ffffff;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size:   var(--small-font-size);
     margin-top: 20px;
     transition: background-color 0.3s ease;
 }
 
 .buy-now-btn:hover {
-    background-color: #27ae60;
+    background-color:    var(--green-color);
 }
 
 /* Responsive Design */
