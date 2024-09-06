@@ -604,6 +604,7 @@ color:  #333 ;
 .copy-right {
     margin-bottom: 3rem;
     color: #ffffff;
+  
 }
 
 /* Tablets (768px - 1024px) */
@@ -716,6 +717,8 @@ color:  #333 ;
 
 .copy-right {
     margin-bottom: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    
 }
 
 
