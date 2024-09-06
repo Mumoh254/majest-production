@@ -344,3 +344,46 @@ html {
     margin-top: 10px;
    
 }
+
+
+.modal {
+    /* existing styles */
+    /* Ensure the modal is positioned correctly */
+}
+
+.modal-content {
+    /* existing styles */
+    /* Ensure the modal content is well-styled */
+}
+
+.modal-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.thank-you-message {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.thank-you-message p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.thank-you-message span {
+    color: #ff1900;
+    font-weight: bold;
+}
+
+.close {
+    /* existing styles */
+    background-color: #ff1900; /* Match the close button color */
+    color: white; /* Text color */
+    border-radius: 50%;
+}
+
+.close:hover {
+    background-color: #06b10f; /* Hover effect */
+}
