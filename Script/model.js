@@ -55,11 +55,13 @@ function calculateTotal() {
     const totalPrice = quantity * discountedPrice;
     document.getElementById('totalPrice').innerText = `KSH ${totalPrice.toFixed(2)}`;
 }
+
 // Function to send WhatsApp message with product details
 function sendWhatsAppMessage() {
     const productName = document.getElementById('modalProductName').innerText;
     const productSizeElement = document.getElementById('productSize');
     const productColorElement = document.getElementById('productColor');
+    const productImage = document.getElementById('modalImage').src; // Capture product image URL
 
     // Check if product size and color elements exist
     if (!productSizeElement || !productColorElement) {
@@ -95,6 +97,8 @@ function sendWhatsAppMessage() {
     *Price per Item:* KSH ${discountedPrice.toFixed(2)}
     *Quantity:* ${quantity}
     *Total Price:* KSH ${totalPrice.toFixed(2)}
+
+    *Product Image:* ${productImage}
 
     *User Information:*
     *Name:* ${userName}
