@@ -83,7 +83,7 @@ Looking forward to your response!
 
 Thank you! 😊`;
 
-    const whatsappNumber = "0740045355"; // Your WhatsApp number
+    const whatsappNumber = "254740045355"; // Your WhatsApp number
 
     // Generate WhatsApp link
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
