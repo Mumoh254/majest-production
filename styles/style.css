@@ -369,12 +369,13 @@ color:  #333 ;
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
     .products h1 {
-        font-size: 40px;
+        font-size:  var(--medium-font-size);
     }
 
     .products {
        
         width: 100%;
+        background: #000;
        
     }
 
@@ -389,18 +390,18 @@ color:  #333 ;
     }
 
     .products .box .card {
-        width: 190px !important;
-        height: 300px !important;
+        width: 200px !important;
+        height: 320px !important;
       
     }
 
     .products .box .card .image img {
         width: auto;
-        height: 150px;
+        height: 155px;
     }
 
     .products .box .card .products_text h2 {
-        font-size: 18px;
+        font-size:   var(--medium-font-size);
     }
     .product-info{
     
@@ -412,7 +413,7 @@ color:  #333 ;
 
 @media (max-width: 480px) {
     .products h1 {
-        font-size: 30px;
+        font-size:   var(--medium-font-size);
     }
 
     .products .box {
@@ -437,7 +438,7 @@ color:  #333 ;
     }
 
     .products {
-        background: #00ff26;
+      
         width: 100%;
     }
 
@@ -481,9 +482,9 @@ color:  #333 ;
 /* Product name and price styling */
 .product-name {
     display: block;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .product-price {
@@ -516,7 +517,7 @@ color:  #333 ;
 
 .footer-container {
     display: grid;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
     max-width: 1200px;
@@ -568,7 +569,7 @@ color:  #333 ;
 
 .subscribe-form .btn {
     padding: 8px 18px;
-    background-color:  var(--green-color);
+    background-color:  var(--red-color);
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -594,7 +595,7 @@ color:  #333 ;
 }
 
 .map a {
-    color:   var(--green-color);
+    color:   var(--red-color);
     text-decoration: none;
     font-size:   var(--medium-font-size);
     font-weight: 600;
