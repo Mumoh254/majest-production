@@ -7,7 +7,7 @@
     top: 0;
     padding: 4%;
     width: 100%; /* Full width */
-    min-height: 100%   !important; /* Full height */
+    max-height: 100%   !important; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
 }
@@ -23,7 +23,7 @@
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
     position: relative;
-    min-height: 80vh; /* Max height for modal */
+    max-height: 70vh; /* Max height for modal */
     overflow-y: auto; /* Scroll if content exceeds height */
 }
 
