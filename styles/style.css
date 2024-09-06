@@ -625,20 +625,21 @@ color:  #333 ;
 /* Small devices in Portrait mode (max-width: 480px) */
 @media (max-width: 480px) {
     .footer {
-        padding: 25px 15px;
+        padding:  2%;
     }
 
     .footer-container {
         grid-template-columns: 1fr;
         gap: 10px;
+        padding: 5%;
     }
 
     .footer-title {
-        font-size: 1.1em;
+        font-size:  var(--small-font-size);
     }
 
     .footer-section p {
-        font-size: 0.85em;
+        font-size: var(--small-font-size);
     }
 
     .social-icons {
