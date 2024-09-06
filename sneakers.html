@@ -9,7 +9,7 @@
     <!--   linking   custom  css  -->
        <link rel="stylesheet" href="./styles/style.css">
 
-       <link rel="stylesheet" href="/styles/model.css">
+       <link rel="stylesheet" href="./styles/model.css">
 
        <!--   Font   awesome  link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -101,7 +101,6 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-body">
-            <!-- Two Column Layout -->
             <div class="modal-row">
                 <div class="modal-image">
                     <img id="modalImage" src="" alt="Product Image" loading="lazy">
@@ -114,24 +113,29 @@
                     <p><strong>Discounted Price:</strong> <span id="discountedPrice"></span></p>
                     <p><strong>Choose Color:</strong></p>
                     <select id="productColor"></select>
+                    <p><strong>Rating:</strong></p>
                     <div class="products_star">
-                        <p><strong>Rating:</strong></p>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <div class="question-section">
-                        <p><strong>Have Questions?</strong></p>
-                        <select>
-                            <option>Ask a Question</option>
-                            <option>Product Availability</option>
-                            <option>Shipping Information</option>
-                            <option>Return Policy</option>
+                    <div class="questions">
+                        <p><strong>Please answer the following questions:</strong></p>
+                        <p><label for="question1">How did you hear about us?</label></p>
+                        <select id="question1">
+                            <option value="social_media">Social Media</option>
+                            <option value="friend">Friend</option>
+                            <option value="advertisement">Advertisement</option>
+                            <option value="other">Other</option>
                         </select>
-                        <p><strong>Need Help?</strong></p>
-                        <a href="tel:+0740045355">Call Us Now: 0740045355</a>
+                        <p><label for="question2">What is your preferred payment method?</label></p>
+                        <select id="question2">
+                            <option value="credit_card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank_transfer">Bank Transfer</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -146,7 +150,6 @@
         </div>
     </div>
 </div>
-
 
 
             
