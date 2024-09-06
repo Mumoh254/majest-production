@@ -83,11 +83,12 @@ Looking forward to your response!
 
 Thank you! 😊`;
 
-const whatsappNumber = "254740045355"; // Ensure this is correct
+const whatsappNumber = "254740045355";
 
     // Generate WhatsApp link
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
+    console.log(whatsappLink); // Check the generated link
     // Redirect to WhatsApp
     window.open(whatsappLink, '_blank');
 }
