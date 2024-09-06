@@ -97,7 +97,7 @@
 
         <div class="box">
 
-  <!-- Modal -->
+   <!-- Modal -->
 <div id="productModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -107,33 +107,28 @@
                     <img id="modalImage" src="" alt="Product Image" loading="lazy">
                 </div>
                 <div class="modal-details">
-                  
-                    <p><strong>Original Price:</strong> <del id="originalPrice"></del></p>
-                    <p><strong>Discounted Price:</strong> <span id="discountedPrice"></span></p>
-                    <p><strong>Choose Color:</strong></p>
                     <h2 id="modalProductName"></h2>
-                    <p><strong>Sizes:</strong></p>
-                    <select id="productSize"></select>
+                    <p><strong>Initial  Price:</strong> <del id="originalPrice"></del></p>
+                    <p><strong>Discounted Price:</strong> <span id="discountedPrice"></span></p>
+
                     
+                    <p><strong>Quantity:</strong></p>
+                    <input type="number" id="productQuantity" value="1" min="1" oninput="calculateTotal()">
+                    
+                    <p><strong>Total Price:</strong> <span id="totalPrice"></span></p>
+                    
+                    <p><strong>Available Sizes:</strong></p>
+                    <select id="productSize"></select>
+
+                
+
+                    <p><strong>Choose Color:</strong></p>
                     <select id="productColor"></select>
-                    <p><strong>Rating:</strong></p>
-                  
-                    <div class="questions">
-                        <p><strong>Please answer the following questions:</strong></p>
-                        <p><label for="question1">How did you hear about us?</label></p>
-                        <select id="question1">
-                            <option value="social_media">Social Media</option>
-                            <option value="friend">Friend</option>
-                            <option value="advertisement">Advertisement</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <p><label for="question2">What is your preferred payment method?</label></p>
-                        <select id="question2">
-                            <option value="credit_card">Credit Card</option>
-                            <option value="paypal">PayPal</option>
-                            <option value="bank_transfer">Bank Transfer</option>
-                        </select>
-                    </div>
+
+               
+
+                 
+
                     <!-- User Information -->
                     <div class="user-info">
                         <p><label for="userName">Your Name:</label></p>
@@ -143,6 +138,8 @@
                         <p><label for="userLocation">Location:</label></p>
                         <input type="text" id="userLocation" placeholder="Enter your location">
                     </div>
+
+                
                     <div class="products_star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -150,22 +147,20 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
+
                 </div>
             </div>
             <div class="modal-footer">
-
                 <div class="shop-now">
-                    <button onclick="sendWhatsAppMessage()">Shop Now</button>
+                    <button id="shopNowButton" onclick="sendWhatsAppMessage()">Shop Now</button>
                 </div>
                 <div class="badge-container">
                     <span class="badge-text">50% OFF</span>
                 </div>
-             
             </div>
         </div>
     </div>
 </div>
-
 
             
         <!-- Product Card Template -->
@@ -1939,8 +1934,9 @@
 
     </div>
 
+    <script src="./Script/model.js" ></script>
     <script  src="/Script/script.js"></script>
-    <script src="/Script/model.js"></script>
+  
     <script src="/Script/whatsapp.js"></script>
 
     

@@ -29,6 +29,9 @@ function openModal(productName, sizes, discountedPrice, originalPrice, productIm
         option.innerText = color;
         colorSelect.appendChild(option);
     });
+
+    // Set initial total price
+    calculateTotal();
 }
 
 // Function to close the modal
@@ -36,59 +39,76 @@ function closeModal() {
     document.getElementById('productModal').style.display = "none";
 }
 
+// Function to close modal when clicking outside of the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('productModal');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+// Function to calculate total price based on quantity
+function calculateTotal() {
+    const quantity = document.getElementById('productQuantity').value;
+    const discountedPrice = parseFloat(document.getElementById('discountedPrice').innerText.replace(/[^0-9.-]+/g, ""));
+    
+    const totalPrice = quantity * discountedPrice;
+    document.getElementById('totalPrice').innerText = `KSH ${totalPrice.toFixed(2)}`;
+}
 // Function to send WhatsApp message with product details
 function sendWhatsAppMessage() {
     const productName = document.getElementById('modalProductName').innerText;
-    const productSize = document.getElementById('productSize').value;
-    const productColor = document.getElementById('productColor').value;
-    const discountedPrice = document.getElementById('discountedPrice').innerText;
-    const productImage = document.getElementById('modalImage').src;
+    const productSizeElement = document.getElementById('productSize');
+    const productColorElement = document.getElementById('productColor');
 
+    // Check if product size and color elements exist
+    if (!productSizeElement || !productColorElement) {
+        console.error('Product size or color element not found');
+        return;
+    }
+
+    const productSize = productSizeElement.value;
+    const productColor = productColorElement.value;
+    const discountedPrice = parseFloat(document.getElementById('discountedPrice').innerText.replace(/[^0-9.-]+/g, ""));
+    const quantity = document.getElementById('productQuantity').value;
+
+    // Calculate total price based on quantity
+    const totalPrice = quantity * discountedPrice;
 
     const userName = document.getElementById('userName').value;
     const userMobile = document.getElementById('userMobile').value;
     const userLocation = document.getElementById('userLocation').value;
-    const question1 = document.getElementById('question1').value;
-    const question2 = document.getElementById('question2').value;
 
+    // Validate user inputs
+    if (!userName || !userMobile || !userLocation) {
+        alert('Please fill in all the required fields: Name, Mobile, and Location.');
+        return;
+    }
 
-    // WhatsApp message
+    // WhatsApp message content
     const message = `Hi there! 👋
 
     I'm interested in purchasing the following product:
     *Product Name:* ${productName}
     *Size:* ${productSize}
     *Color:* ${productColor}
-    *Price:* ${discountedPrice}
-    *Product Image:* ${productImage}
+    *Price per Item:* KSH ${discountedPrice.toFixed(2)}
+    *Quantity:* ${quantity}
+    *Total Price:* KSH ${totalPrice.toFixed(2)}
 
-    
-    Could you please provide more details on the following?
-   1. **Availability:** Is the product available in stock?
-2. **Shipping:** What are the shipping options and costs?
-3. **Return Policy:** What is your return policy for this product?
-4. **Payment Methods:** What payment methods do you accept?
-5. **Additional Features:** Are there any additional features or specifications I should know about?
+    *User Information:*
+    *Name:* ${userName}
+    *Mobile Number:* ${userMobile}
+    *Location:* ${userLocation}
 
-*User Information:*
-*Name:* ${userName}
-*Mobile Number:* ${userMobile}
-*Location:* ${userLocation}
+    Looking forward to your response!
 
-*Additional Questions:*
-1. How did you hear about us? ${question1}
-2. What is your preferred payment method? ${question2}
+    Thank you! 😊`;
 
-Looking forward to your response!
+    const whatsappNumber = "254740045355"; 
 
-Thank you! 😊`;
-
-const whatsappNumber = "254720671648";
-
-    // Generate WhatsApp link
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-    console.log(whatsappLink); // Check the generated link
-    // Redirect to WhatsApp
+    // Open WhatsApp link in new tab
     window.open(whatsappLink, '_blank');
 }

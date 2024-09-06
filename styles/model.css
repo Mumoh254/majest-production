@@ -201,9 +201,9 @@ html {
 
     .modal-content {
         width: 100%; /* Make it slightly smaller than the viewport width */
-        max-width: 100%; /* Ensure it does not exceed viewport width */
+        width: 100% !important; /* Ensure it does not exceed viewport width */
         margin: 0 auto; /* Center the content */
-        padding: 3%; /* Adjust padding */
+        padding: 1%; /* Adjust padding */
     }
 
     .modal-details h2 {
@@ -312,4 +312,35 @@ html {
     color: #ff1900; /* Red color for discounted price */
     font-weight: bold; /* Optional: make the text bold */
     font-size: 18px; /* Optional: adjust font size */
+}
+
+
+#productQuantity {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size:  24px;
+    outline: none;
+    font-weight: 800;
+    width: 50%; /* Adjust width based on your design */
+}
+
+#productQuantity:focus {
+    border-color: #3498db; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Add shadow effect on focus */
+}
+#productQuantity  input {
+    text-decoration:  none;
+}
+
+#totalPrice {
+    font-weight: bold;
+  
+    font-size: 18px;
+    color:#ff1900; /* You can change this color to match your design */
+    margin-top: 10px;
+   
 }
