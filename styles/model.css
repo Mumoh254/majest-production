@@ -200,8 +200,8 @@ html {
     }
 
     .modal-content {
-        width: 100%; /* Make it slightly smaller than the viewport width */
-        width: 100% !important; /* Ensure it does not exceed viewport width */
+        width: 80%; /* Make it slightly smaller than the viewport width */
+        width: 80% !important; /* Ensure it does not exceed viewport width */
         margin: 0 auto; /* Center the content */
         padding: 1%; /* Adjust padding */
     }

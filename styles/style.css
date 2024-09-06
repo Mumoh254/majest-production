@@ -870,32 +870,41 @@ color:  black ;
 
 /* Social Icons */
 .bottom-social-icons{
+    
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: rgba(249, 248, 248, 1); /* Semi-transparent background */
+    background: #f2fcf6; /* Semi-transparent background */
     z-index: 1000; /* High z-index to appear on top */
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px 0;
-    box-shadow: 0 -2px 1px rgba(255, 16, 16, 0.038);
+    box-shadow: 0 -2px 1px #fff;
+  
+    
 }
 
 .bottom-social-icons .icon {
-    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    border-radius: 50%;
+    font-size: 16px; /* Adjust icon size as needed */
+   
+   
     cursor: pointer;
-  
+    text-align: center;
+    background: rgba(255, 255, 255, 0.031);
 }
 
 .bottom-social-icons .icon img {
-    width: 30px;
-    height: 30px;
+   
+    height: 20px;
     transition: transform 0.3s;
  
-}
-
-.bottom-social-icons .icon img:hover {
-    transform: scale(1.2);
 }
 
 
@@ -906,10 +915,7 @@ color:  black ;
         padding: 10px 0;
     }
 
-    .bottom-social-icons .icon img {
-        width: 28px;
-        height: 28px;
-    }
+ 
 }
 
 

@@ -2,12 +2,6 @@
 
 
 
-function toggleColors() {
-    var dropdown = document.getElementById("colorDropdown");
-    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-}
-
-
 
 
 
@@ -52,35 +46,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
 // Get the modal
-  var modal = document.getElementById("callModal");
-    
-  // Get the icon that opens the modal
-  var callIcon = document.getElementById("callIcon");
+var modal = document.getElementById("callModal");
 
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+// Get the icon that opens the modal
+var callIcon = document.getElementById("callIcon");
 
-  // When the user clicks the icon, open the modal
-  callIcon.onclick = function() {
-      modal.style.display = "block";
-  }
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-      modal.style.display = "none";
-  }
+// When the user clicks the icon, open the modal
+callIcon.onclick = function() {
+    modal.style.display = "block";
+}
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
-  // Function to trigger the call
-  function callNumber(number) {
-      window.location.href = `tel:${number}`;
-  }
 
+window.onclick = function(event) {
+    const productModal = document.getElementById('productModal');
+    if (productModal && event.target === productModal) {
+        closeProductModal();
+    }
+
+    const callModal = document.getElementById('callModal');
+    if (callModal && event.target === callModal) {
+        callModal.style.display = "none";
+    }
+};
+
+// Function to trigger the call
+function callNumber(number) {
+    window.location.href = `tel:${number}`;
+}
