@@ -364,7 +364,8 @@ html {
 
 .thank-you-message {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 18px;
+    margin-bottom: 16px;
 }
 
 .thank-you-message p {
