@@ -1,29 +1,30 @@
 /* Modal Background */
 .modal {
     display: none; /* Hidden by default */
-    position: sticky; /* Stay in place */
+    position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    overflow: auto; /* Enable scroll if needed */
+    padding: 4%;
     width: 100%; /* Full width */
-    min-height: 100%; /* Full height */
+    height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
-    padding:  4% ;
 }
 
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin: 1% auto; /* Centered */
+    margin: 5% auto; /* Centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 100%  !important; /* Adjust width */
+    width: 90%; /* Adjust width */
     max-width: 1000px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
     position: relative;
+    max-height: 80vh; /* Max height for modal */
+    overflow-y: auto; /* Scroll if content exceeds height */
 }
 
 /* Close Button */
@@ -46,8 +47,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns layout */
     gap: 20px;
-    width:  100%;
- 
 }
 
 .modal-image {
@@ -67,7 +66,7 @@
 }
 
 .modal-details h2 {
-    margin: 0 0 5px;
+    margin: 0 0 15px;
 }
 
 .modal-details p {
@@ -93,9 +92,7 @@ select {
 
 /* Questions Section */
 .question-section {
-    margin: 2px 0;
-    
-    width: 100% !important;
+    margin: 20px 0;
 }
 
 .question-section p {
@@ -125,8 +122,7 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2px;
-   
+    margin-top: 20px;
 }
 
 /* Badge Container */
@@ -134,11 +130,10 @@ select {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-
 }
 
 .badge-text {
-    background-color: #ff0c04; /* Red background for attention */
+    background-color: #d9534f; /* Red background for attention */
     color: white;
     padding: 10px 20px;
     border-radius: 20px; /* Rounded badge */
@@ -146,7 +141,6 @@ select {
     font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
- 
 }
 
 /* Shop Now Button */
@@ -156,7 +150,7 @@ select {
 }
 
 .shop-now button {
-    background-color: #32d609;
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 15px 25px;
@@ -173,8 +167,6 @@ select {
 @media screen and (max-width: 768px) {
     .modal-row {
         grid-template-columns: 1fr; /* Single column layout on small screens */
-        min-height: 100vh;
-        padding: 4% !important;
     }
 
     .modal-image img {
@@ -183,7 +175,7 @@ select {
 
     .badge-text {
         font-size: 16px;
-        padding: 6px 5px;
+        padding: 6px 15px;
     }
 
     select {
