@@ -44,13 +44,44 @@ function sendWhatsAppMessage() {
     const discountedPrice = document.getElementById('discountedPrice').innerText;
     const productImage = document.getElementById('modalImage').src;
 
+
+    const userName = document.getElementById('userName').value;
+    const userMobile = document.getElementById('userMobile').value;
+    const userLocation = document.getElementById('userLocation').value;
+    const question1 = document.getElementById('question1').value;
+    const question2 = document.getElementById('question2').value;
+
+
     // WhatsApp message
-    const message = `Hi, I'm interested in buying the product: 
-    *${productName}* 
-    Size: ${productSize}
-    Color: ${productColor}
-    Price: ${discountedPrice}
-    Product Image: ${productImage}`;
+    const message = `Hi there! 👋
+
+    I'm interested in purchasing the following product:
+    *Product Name:* ${productName}
+    *Size:* ${productSize}
+    *Color:* ${productColor}
+    *Price:* ${discountedPrice}
+    *Product Image:* ${productImage}
+
+    
+    Could you please provide more details on the following?
+   1. **Availability:** Is the product available in stock?
+2. **Shipping:** What are the shipping options and costs?
+3. **Return Policy:** What is your return policy for this product?
+4. **Payment Methods:** What payment methods do you accept?
+5. **Additional Features:** Are there any additional features or specifications I should know about?
+
+*User Information:*
+*Name:* ${userName}
+*Mobile Number:* ${userMobile}
+*Location:* ${userLocation}
+
+*Additional Questions:*
+1. How did you hear about us? ${question1}
+2. What is your preferred payment method? ${question2}
+
+Looking forward to your response!
+
+Thank you! 😊`;
 
     const whatsappNumber = "0740045355"; // Your WhatsApp number
 
