@@ -96,12 +96,10 @@
 
 
         <div class="box">
-
-   <!-- Modal -->
-<div id="productModal" class="modal  productModal">
+<!-- Modal -->
+<div id="productModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeProductModal()">&times;</span>
-
         <div class="modal-body">
             <div class="modal-row">
                 <div class="modal-image">
@@ -109,10 +107,9 @@
                 </div>
                 <div class="modal-details">
                     <h2 id="modalProductName"></h2>
-                    <p><strong>Initial  Price:</strong> <del id="originalPrice"></del></p>
+                    <p><strong>Initial Price:</strong> <del id="originalPrice"></del></p>
                     <p><strong>Discounted Price:</strong> <span id="discountedPrice"></span></p>
 
-                    
                     <p><strong>Quantity:</strong></p>
                     <input type="number" id="productQuantity" value="1" min="1" oninput="calculateTotal()">
                     
@@ -121,14 +118,8 @@
                     <p><strong>Available Sizes:</strong></p>
                     <select id="productSize"></select>
 
-                
-
                     <p><strong>Choose Color:</strong></p>
                     <select id="productColor"></select>
-
-               
-
-                 
 
                     <!-- User Information -->
                     <div class="user-info">
@@ -140,7 +131,6 @@
                         <input type="text" id="userLocation" placeholder="Enter your location">
                     </div>
 
-                
                     <div class="products_star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -148,7 +138,6 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-
                 </div>
             </div>
             <div class="modal-footer">
@@ -157,6 +146,10 @@
                 </div>
                 <div class="badge-container">
                     <span class="badge-text">50% OFF</span>
+                </div>
+                <div class="thank-you-message">
+                    <p><strong>Thank you for shopping with us!</strong></p>
+                    <p>Best regards, <span style="color:#ff1900;">Majesty Collections</span></p>
                 </div>
             </div>
         </div>

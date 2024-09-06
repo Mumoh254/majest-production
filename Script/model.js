@@ -3,7 +3,7 @@ function openModal(productName, sizes, discountedPrice, originalPrice, productIm
     document.getElementById('productModal').style.display = "block";
 
     document.getElementById('modalProductName').innerText = productName;
-    document.getElementById('modalImage').src = productImage;
+    document.getElementById('modalImage').src = productImage; // Attach the product image
     document.getElementById('originalPrice').innerText = originalPrice;
     document.getElementById('discountedPrice').innerText = discountedPrice;
 
@@ -57,6 +57,7 @@ function sendWhatsAppMessage() {
     const discountedPrice = parseFloat(document.getElementById('discountedPrice').innerText.replace(/[^0-9.-]+/g, ""));
     const quantity = document.getElementById('productQuantity').value;
     const totalPrice = quantity * discountedPrice;
+    const productImage = document.getElementById('modalImage').src;
     const userName = document.getElementById('userName').value;
     const userMobile = document.getElementById('userMobile').value;
     const userLocation = document.getElementById('userLocation').value;
@@ -67,6 +68,7 @@ function sendWhatsAppMessage() {
     }
 
     const message = `Hi there! 👋
+
     I'm interested in purchasing the following product:
     *Product Name:* ${productName}
     *Size:* ${productSize}
@@ -74,12 +76,14 @@ function sendWhatsAppMessage() {
     *Price per Item:* KSH ${discountedPrice.toFixed(2)}
     *Quantity:* ${quantity}
     *Total Price:* KSH ${totalPrice.toFixed(2)}
+    *Product Image:* ${productImage}
     *User Information:*
     *Name:* ${userName}
     *Mobile Number:* ${userMobile}
     *Location:* ${userLocation}
     Looking forward to your response!
-    Thank you! 😊`;
+
+   Thank you ! for shopping with us at *Majesty Collections*.  We value your business and   we are here to assist with any further inquiries 😊`;
 
     const whatsappNumber = "254740045355"; 
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
