@@ -231,11 +231,12 @@ header {
     width: 100%;
    
    height: auto;
+  
 }
 
 .products h1{
     margin: 35px 0;
-    font-size: var(--medium-font-size);
+    font-size: var(--large-font-size);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,7 +248,7 @@ header {
 }
 .products .box {
     width: 90%;
-   
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.06) 0px 7px 13px -3px, rgba(0, 0, 0, 0.056) 0px -3px 0px inset;
     margin: 0 auto; /* Centers the box horizontally */
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Creates a 4-column grid */
@@ -588,10 +589,13 @@ color:  #333 ;
     color: #ffffff;
     background:   var(--red-color);
     font-size:   var(--small-font-size);
+   
 }
 
 .footer-bottom p {
     margin: 0;
+
+   
 }
 
 .map a {
@@ -666,6 +670,8 @@ color:  #333 ;
 
     .footer-bottom {
         font-size: 0.75em;
+        
+      
     }
 
     .map a {
@@ -718,7 +724,7 @@ color:  #333 ;
 .copy-right {
     margin-bottom: 4rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    
+
 }
 
 
@@ -731,13 +737,13 @@ color:  #333 ;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #f2fcf6; /* Semi-transparent background */
+    background: #ffffff; /* Semi-transparent background */
     z-index: 1000; /* High z-index to appear on top */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 0;
-    box-shadow: 0 -2px 1px #fff;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   
     
 }
@@ -750,6 +756,8 @@ color:  #333 ;
     height: 30px; /* Adjust size as needed */
     border-radius: 50%;
     font-size: 16px; /* Adjust icon size as needed */
+    margin: 3px  0;
+    background: #000 !important;
    
    
     cursor: pointer;
@@ -907,3 +915,30 @@ color:  #333 ;
 
 /* Modal container */
 
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    width: 50px;
+    height: 50px;
+    background-color: #ff1900; /* Red color for the button */
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #06b10f; /* Green when hovered */
+}
+
+/* Show button when page is scrolled down */
+.show {
+    display: block;
+}

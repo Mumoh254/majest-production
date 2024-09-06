@@ -82,3 +82,25 @@ window.onclick = function(event) {
 function callNumber(number) {
     window.location.href = `tel:${number}`;
 }
+
+
+// Get the button
+const backToTopBtn = document.getElementById("backToTop");
+
+// When the user scrolls down 200px from the top of the document, show the button
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.classList.add("show");
+    } else {
+        backToTopBtn.classList.remove("show");
+    }
+};
+
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
