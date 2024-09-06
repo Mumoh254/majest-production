@@ -36,13 +36,13 @@ function openModal(productName, sizes, discountedPrice, originalPrice, productIm
 
 // Function to close the modal
 function closeModal() {
-    document.getElementById('productModal').style.display = "none";
+    const modal = document.getElementById('productModal');
+    modal.style.display = "none"; // Hides the modal
 }
-
 // Function to close modal when clicking outside of the modal content
 window.onclick = function(event) {
     const modal = document.getElementById('productModal');
-    if (event.target == modal) {
+    if (event.target === modal) {
         closeModal();
     }
 }
