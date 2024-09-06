@@ -7,7 +7,7 @@
     top: 0;
     padding: 4%;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    min-height: 100%   !important; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
 }
@@ -15,15 +15,15 @@
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* Centered */
+    margin: 1% auto; /* Centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 90%; /* Adjust width */
+    width: 100%; /* Adjust width */
     max-width: 1000px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
     position: relative;
-    max-height: 80vh; /* Max height for modal */
+    min-height: 80vh; /* Max height for modal */
     overflow-y: auto; /* Scroll if content exceeds height */
 }
 
