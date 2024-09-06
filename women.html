@@ -9,6 +9,8 @@
     <!--   linking   custom  css  -->
        <link rel="stylesheet" href="./styles/style.css">
 
+       <link rel="stylesheet" href="./styles/model.css">
+
        <!--   Font   awesome  link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -48,10 +50,12 @@
                 <div class="wish-cart">
                     <ul>
                         <li><a href="#"><img  id="heart" src="./assets/Images/header/heart_image-removebg-preview.png" loading="lazy"  alt="majesty " ></a></li>
-                        <li><a href="#"><img   id="shoping" src="./assets/Images/header/shping_card_image-removebg-preview.png"  loading="lazy"   alt="  majesty"></a></li>  
+                     
                     </ul>
 
-                    <span>2</span>
+                    <span>
+                        Majesty   Collections
+                    </span>
                 </div>
             </div>
         </header>
@@ -66,15 +70,20 @@
      
     <!--Products-->
 
+
+    <!--    product   model   -->
+    <div class="container">
+
+
+
+
+    </div>
+ 
     
     <!-- Modal -->
-    <div id="buyNowModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2>Buy Now</h2>
-            <button class="buy-button" onclick="redirectToWhatsApp()">Buy Now</button>
-        </div>
-    </div>
+
+  <!-- Modal -->
+
 
 
 
@@ -86,19 +95,114 @@
 
         <br>
 
+
+
         <div class="box">
+<!-- Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProductModal()">&times;</span>
+        <div class="modal-body">
+            <div class="modal-row">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Product Image" loading="lazy">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalProductName"></h2>
+                    <p><strong>Initial Price:</strong> <del id="originalPrice"></del></p>
+                    <p><strong>Discounted Price:</strong> <span id="discountedPrice"></span></p>
+
+                    <p><strong>Quantity:</strong></p>
+                    <input type="number" id="productQuantity" value="1" min="1" oninput="calculateTotal()">
+                    
+                    <p><strong>Total Price:</strong> <span id="totalPrice"></span></p>
+                    
+                    <p><strong>Available Sizes:</strong></p>
+                    <select id="productSize"></select>
+
+                    <p><strong>Choose Color:</strong></p>
+                    <select id="productColor"></select>
+
+                    <!-- User Information -->
+                    <div class="user-info">
+                        <p><label for="userName">Your Name:</label></p>
+                        <input type="text" id="userName" placeholder="Enter your name">
+                        <p><label for="userMobile">Mobile Number:</label></p>
+                        <input type="text" id="userMobile" placeholder="Enter your mobile number">
+                        <p><label for="userLocation">Location:</label></p>
+                        <input type="text" id="userLocation" placeholder="Enter your location">
+                    </div>
+
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="shop-now">
+                    <button id="shopNowButton" onclick="sendWhatsAppMessage()">Shop Now</button>
+                </div>
+                <div class="badge-container">
+                    <span class="badge-text">50% OFF</span>
+                </div>
+                <div class="thank-you-message">
+                    <p><strong>Thank you for shopping with us!</strong></p>
+                    <p>Best regards, <span style="color:#ff1900;">Majesty Collections</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
             
+        <!-- Product Card Template -->
 
-            <div class="card">
+        
+<div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker1.png', ['Red', 'Blue', 'Green', 'Black'])">
+    <div class="small_card">
+        <span class="discount-badge">50% OFF</span>
+    </div>
+    <div class="image">
+        <img src="./assets/Images/sneakers/sneaker1.png" alt="Air Max" loading="lazy">
+    </div>
+    <div class="product-info">
+        <span class="product-title product-name">Air Max</span>
+        <div class="price">
+            <div class="foot-prints">
+                <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+            </div>
+            <div class="price-tag">
+                <del class="del">8000</del>
+                <span class="product-price span">4000</span>
+            </div>
+        </div>
+        <div class="products_star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <br>
+    </div>
+</div>
+            <!-- 
+
+
+
+
+            !-- Product Card Example -->
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker2.png', ['red', 'blue', 'green', 'black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
                 </div>
-        
                 <div class="image">
-
-                    <img src="./assets/Images/women/women.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker2.png" alt="Air Max" loading="lazy">
                 </div>
-        
                 <div class="product-info">
                     <span class="product-title product-name">Air Max</span>
                     <div class="price">
@@ -117,147 +221,21 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <br>
-                </div>
-            </div>
-
-           <div class="card">
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                </div>
-        
-                <div class="image">
-                    <img src="./assets/Images/women/women1.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-        
-                <div class="product-info">
-                    <span class="product-title product-name">Air Max</span>
-                    <div class="price">
-                        <div class="foot-prints">
-                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
-                        </div>
-                        <div class="price-tag">
-                            <del class="del">8000</del>
-                            <span class="product-price span">4000</span>
-                        </div>
-                    </div>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <br>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                </div>
-        
-                <div class="image">
-                    <img src="./assets/Images/women/women2.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-        
-                <div class="product-info">
-                    <span class="product-title product-name">Air Max</span>
-                    <div class="price">
-                        <div class="foot-prints">
-                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
-                        </div>
-                        <div class="price-tag">
-                            <del class="del">6000</del>
-                            <span class="product-price span">4000</span>
-                        </div>
-                    </div>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <br>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                </div>
-        
-                <div class="image">
-
-                    <img src="./assets/Images/women/women4.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-        
-                <div class="product-info">
-                    <span class="product-title product-name">Air Max</span>
-                    <div class="price">
-                        <div class="foot-prints">
-                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
-                        </div>
-                        <div class="price-tag">
-                            <del class="del">8000</del>
-                            <span class="product-price span">4000</span>
-                        </div>
-                    </div>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <br>
                 </div>
             </div>
 
 
-           <div class="card">
+
+
+
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker3.png', ['Red', 'Blue', 'Green', 'Black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
                 </div>
-        
                 <div class="image">
-
-                    <img src="./assets/Images/women/women5.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air Max" loading="lazy">
                 </div>
-        
-                <div class="product-info">
-                    <span class="product-title product-name">Air Max</span>
-                    <div class="price">
-                        <div class="foot-prints">
-                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
-                        </div>
-                        <div class="price-tag">
-                            <del class="del">8000</del>
-                            <span class="product-price span">4000</span>
-                        </div>
-                    </div>
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <br>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                </div>
-        
-                <div class="image">
-
-                    <img src="./assets/Images/women/women6png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-        
                 <div class="product-info">
                     <span class="product-title product-name">Air Max</span>
                     <div class="price">
@@ -282,276 +260,26 @@
 
 
 
-            <div class="card">
 
-              
-
-                <div class="image">
-                    
-              
-
-                    <img src="./assets/Images/women/women7.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                  
-                </div>
-
-                <div class="image">
-                    
-               
-
-                    <img src="./assets/Images/women/women8.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                   
-                </div>
-
-                <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/women/women9.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                 
-                </div>
-
-                <div class="image">
-                    
-         
-                    <img src="./assets/Images/women/women10.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                 
-                </div>
-
-                <div class="image">
-                    
-                  
-                    <img src="./assets/Images/women/women11.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                   
-                </div>
-
-                <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/women/women12.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                  
-                </div>
-
-                <div class="image">
-                    
         
-
-                    <img src="./assets/Images/women/women13.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker6.png', ['Red', 'Blue', 'Green', 'Black'])">
+                <div class="small_card">
+                    <span class="discount-badge">50% OFF</span>
                 </div>
-
-              
+                <div class="image">
+                    <img src="./assets/Images/sneakers/sneaker6.png" alt="Air Max" loading="lazy">
+                </div>
                 <div class="product-info">
-                    <span class="product-name">Air max</span>
+                    <span class="product-title product-name">Air Max</span>
                     <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                        </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
+                        </div>
+                    </div>
                     <div class="products_star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -559,39 +287,31 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-
-                  
-                  </div>
-
-
-
+                    <br>
+                </div>
             </div>
 
 
-            <div class="card">
-
+        
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker3.png', ['Red', 'Blue', 'Green', 'Black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
-                  
                 </div>
-
                 <div class="image">
-                    
-              
-                    <img src="./assets/Images/women/women14.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air Max" loading="lazy">
                 </div>
-
-              
                 <div class="product-info">
-                    <span class="product-name">Air max</span>
+                    <span class="product-title product-name">Air Max</span>
                     <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                        </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
+                        </div>
+                    </div>
                     <div class="products_star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -599,42 +319,35 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-
-                  
-                  </div>
-
-
-
+                    <br>
+                </div>
             </div>
 
 
 
 
-            <div class="card">
 
+
+
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker3.png', ['Red', 'Blue', 'Green', 'Black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
-               
                 </div>
-
                 <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/women/women15.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air Max" loading="lazy">
                 </div>
-
-              
                 <div class="product-info">
-                    <span class="product-name">Air max</span>
+                    <span class="product-title product-name">Air Max</span>
                     <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                        </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
+                        </div>
+                    </div>
                     <div class="products_star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -642,80 +355,140 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-
-                  
-                  </div>
-
-
-
+                    <br>
+                </div>
             </div>
 
 
-            <div class="card">
 
+
+
+       
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker3.png', ['Red', 'Blue', 'Green', 'Black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
-                 
                 </div>
-
                 <div class="image">
-                    
+                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air Max" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <span class="product-title product-name">Air Max</span>
+                    <div class="price">
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                        </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
+                        </div>
+                    </div>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+   
+
+
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker3.png', ['Red', 'Blue', 'Green', 'Black'])">
+                <div class="small_card">
+                    <span class="discount-badge">50% OFF</span>
+                </div>
+                <div class="image">
+                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air Max" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <span class="product-title product-name">Air Max</span>
+                    <div class="price">
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                        </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
+                        </div>
+                    </div>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+
+
+
+
+
+
+     
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker3.png', ['Red', 'Blue', 'Green', 'Black'])">
+                <div class="small_card">
+                    <span class="discount-badge">50% OFF</span>
+                </div>
+                <div class="image">
+                    <img src="./assets/Images/sneakers/sneaker3.png" alt="Air Max" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <span class="product-title product-name">Air Max</span>
+                    <div class="price">
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                        </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
+                        </div>
+                    </div>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+
+
+
+
             
-
-                    <img src="./assets/Images/women/women16.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-            <div class="card">
-
+     
+        
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker4.png', ['Red', 'Blue', 'Green', 'Black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
-                  
                 </div>
-
                 <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/women/women17.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
+                    <img src="./assets/Images/sneakers/sneaker4.png" alt="Air Max" loading="lazy">
                 </div>
-
-              
                 <div class="product-info">
-                    <span class="product-name">Air max</span>
+                    <span class="product-title product-name">Air Max</span>
                     <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
+                        <div class="foot-prints">
+                            <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                        </div>
+                        <div class="price-tag">
+                            <del class="del">8000</del>
+                            <span class="product-price span">4000</span>
+                        </div>
+                    </div>
                     <div class="products_star">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -723,709 +496,1323 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-
-                  
-                  </div>
-
-
-
+                    <br>
+                </div>
             </div>
 
 
-            <div class="card">
 
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                
-                </div>
+            
+    
 
-                <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/women/women18.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker5.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker5.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
                     </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                  
-                </div>
-
-                <div class="image">
-                    
-                  
-
-                    <img src="./assets/Images/women/women19.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
                     </div>
-
-                  
-                  </div>
-
-
-
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
             </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                  
-                </div>
-
-                <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/women/women20.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                
-                </div>
-
-                <div class="image">
-                    
-               
-
-                    <img src="./assets/Images/women/women21.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                   
-                </div>
-
-                <div class="image">
-                    
-                 
-                    <img src="./assets/Images/women/women22.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                  
-                </div>
-
-                <div class="image">
-                    
-                 
-                    <img src="./assets/Images/women/women23.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                   <span class="discount-badge">50% OFF</span>
-                 
-                </div>
-
-                <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/women/women24.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                  
-                </div>
-
-                <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/women/women25.png" alt="Majesty Shoe Collections Airmax" loading="lazy" >
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-             
-                </div>
-
-                <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/sneakers/img32png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-              
-                </div>
-
-                <div class="image">
-                    
-                  
-
-                    <img src="./assets/Images/sneakers/img33.png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                 
-                </div>
-
-                <div class="image">
-                    
-                 
-
-                    <img src="./assets/Images/sneakers/img34.png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                
-                </div>
-
-                <div class="image">
-                    
-                
-
-                    <img src="./assets/Images/sneakers/img35.png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-               
-                </div>
-
-                <div class="image">
-                    
-              
-
-                    <img src="./assets/Images/sneakers/img36.png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                 
-                </div>
-
-                <div class="image">
-                    
-                 
-
-                    <img src="./assets/Images/sneakers/img37.png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                 
-                </div>
-
-                <div class="image">
-                    
-                 
-
-                    <img src="./assets/Images/sneakers/img38png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                 
-                </div>
-
-                <div class="image">
-                    
-               
-
-                    <img src="./assets/Images/sneakers/img39.png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-
-              
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-            <div class="card">
-
-                <div class="small_card">
-                    <span class="discount-badge">50% OFF</span>
-                  
-                </div>
-
-                <div class="image">
-                    
-             
-
-                    <img src="./assets/Images/sneakers/img40.png" alt="majesty shoe  collections Airmax "  loading="lazy">
-                </div>
-                <div class="product-info">
-                    <span class="product-name">Air max</span>
-                    <div class="price">
-
-                        <i class="fa-solid fa-shoe-prints">  37 - 38 </i>  <br>
-
-                        <del class="del">8000</del><span class="span"> 4000 </span>    
-                    </div>   
-
-                  
-                    <div class="products_star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-
-                  
-                  </div>
-
-
-
-            </div>
-
-
         </div>
 
 
 
+        
     
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker6.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker6.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker7.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker7.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker8.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker8.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker9.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker9.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker10.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker10.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker11.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker11.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker12.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker12.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker13.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker13.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker14.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker14.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker15.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker15.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker16.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker16.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker17.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker17.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker18.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker18.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker19.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker19.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker20.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker20.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker21.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker21.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker22.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker22.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker23.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker23.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker24.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker24.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker25.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker25.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker26.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker26.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker27.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker27.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker28.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker28.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker29.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker29.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker30.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker30.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker31.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker31.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker32.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker32.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker33.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker33.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker34.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker34.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker35.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker35.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker36.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker36.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker37.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker37.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker38.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker38.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker39.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker39.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+        
+    
+
+        
+     
+        
+        <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker40.png', ['Red', 'Blue', 'Green', 'Black'])">
+            <div class="small_card">
+                <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="image">
+                <img src="./assets/Images/sneakers/sneaker40.png" alt="Air Max" loading="lazy">
+            </div>
+            <div class="product-info">
+                <span class="product-title product-name">Air Max</span>
+                <div class="price">
+                    <div class="foot-prints">
+                        <i class="fa-solid fa-shoe-prints"> 37 - 38 </i>
+                    </div>
+                    <div class="price-tag">
+                        <del class="del">8000</del>
+                        <span class="product-price span">4000</span>
+                    </div>
+                </div>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+        </div>
+
+
+
 
 
 
@@ -1478,13 +1865,19 @@
             </div>
         </div>
     
-        <div class="footer-bottom  copy-right">
-            <p>&copy; 2024 | majesty collections |  All Rights Reserved.</p>
+      
+        <div class="copy-section">
+            <div class="footer-bottom  copy-right">
+                <p>&copy; 2024 | majesty collections |  All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
 
-
+    <a href="#" class="back-to-top" id="backToTop">
+        &#x25B2; <!-- This is an upward arrow symbol -->
+    </a>
+    
 
 
     <!--    footer  -bottom   -call-action-icons -->   
@@ -1543,7 +1936,12 @@
 
     </div>
 
-   <script  src="/Script/script.js"></script>
+
+
+    <script src="./Script/model.js" ></script>
+    <script  src="/Script/script.js"></script>
+  
+    <script src="/Script/whatsapp.js"></script>
 
     
 </body>

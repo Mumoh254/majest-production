@@ -1,5 +1,6 @@
 
 /*   external   fonts   */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -13,7 +14,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Fira sans";
+    font-family: "open-sans";
 }
 
 body{
@@ -50,13 +51,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 30px;
     background-color: #ffffff; /* Rich Navy */
-    color: #000000;
+    color: #333;
     position: fixed !important;
     top: 0 !important ;
+    max-height: 102px;
     z-index: 200 !important ;
     overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.041) 0px 1px 0px;
 }
 
 .left ul.main {
@@ -80,7 +83,7 @@ header {
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 100px;
     height: auto;
 }
 
@@ -107,9 +110,12 @@ header {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: rgba(255, 0, 0, 0.954);
+    background-color:   var(--red-color);
     color: #fff;
-    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 1px;
     padding: 4px 8px;
     font-size: var(--small-font-size);
 }
@@ -123,6 +129,7 @@ header {
   /* Slider Container */
   .slider-container {
     display: flex;
+ 
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
@@ -472,6 +479,8 @@ color:  #333 ;
 /* Product info styling */
 .product-info {
     text-align: center;
+   padding: 10px  0px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
     width: 100%;
     padding-bottom: 10px;
     display: flex;
@@ -790,6 +799,7 @@ color:  #333 ;
     right: 0;
     z-index: 100;
     background-color: white;
+  
     padding: 10px 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -811,13 +821,13 @@ color:  #333 ;
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
     .bottom-social-icons {
-        bottom: 10px;
+      
         padding: 8px 0;
     }
 
     .icon img {
-        width: 35px;
-        height: 35px;
+       
+        height: 25px;
     }
 }
 
@@ -829,7 +839,7 @@ color:  #333 ;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 30%;
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
@@ -842,6 +852,10 @@ color:  #333 ;
     text-align: center;
     max-width: 400px;
     margin: auto;
+    font-size:  var(--large-font-size);
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 4px !important;
 }
 
 .closes {
@@ -858,7 +872,8 @@ color:  #333 ;
 .call-button {
     background-color: #ff1900; /* Red for call buttons */
     color: white;
-    padding: 10px;
+    font-size: var(--medium-font-size);
+    padding: 20px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
@@ -936,11 +951,11 @@ color:  #333 ;
     }
     .main li  a  {
        
-        font-size: 1.2rem;
+        font-size: var(--small-font-size);
     }
     .tops {
         
-        font-size: 1.2rem;
+        font-size:   var(--small-font-size);
         text-align: center;
     }
 }

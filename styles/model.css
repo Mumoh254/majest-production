@@ -15,7 +15,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Fira sans";
+   
 }
 
 body{
@@ -48,378 +48,222 @@ html {
     overflow: -moz-scrollbars-none;
 }
 
-
-
+/* Modal Overlay */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    padding: 8%;
-   
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for sleekness */
+    padding: 6%;
+    font-family:  "poppins";
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #ffffff;
-    margin: 0 auto; /* Centered */
-    padding: 20px;
-    border-radius: 1rem;
-    width: 100%; /* Default width for larger screens */
-    max-width: 800px; /* Max width for larger screens */
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 24px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    overflow-y: auto; /* Enable scroll if content overflows */
-    height: 80%; /* Allow height to adjust based on content */
+    height: auto;
+    overflow-y: auto;
     position: relative;
+    font-family:  "poppins";
 }
 
 /* Close Button */
 .close {
     color: #333;
     float: right;
-    font-size: var(--medium-font-size);
-    font-weight: 700;
+    font-size:   var(--small-font-size);
+    font-weight:    600;
     cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
 }
 
 .close:hover {
-    color: var(); /* Red color on hover */
-}
-
-/* Modal Body Layout */
-.modal-body {
-    display: flex;
-    flex-direction: column;
+    background-color: #06b10f; /* Accent color for hover */
+    color: white;
+    border-radius: 50%;
 }
 
 /* Modal Image */
-.modal-image {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
 .modal-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-bottom: 50px;
 }
 
 /* Modal Details */
 .modal-details {
-    padding: 10px;
-    font-family: 'Arial', sans-serif;
+    padding: 10px 15px;
+  
+ 
 }
 
 .modal-details h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 12px;
+    font-weight: bold;
 }
 
 .modal-details p {
     font-size: 16px;
-    margin: 8px 0;
-    line-height: 1.5;
+    margin: 10px 0;
+    line-height: 1.6;
 }
 
+/* Select Element */
 .modal-details select {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 10px;
+    margin-top: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
 }
 
+/* Price Section */
 .modal-details .modal-price {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .modal-details .modal-price.del {
     text-decoration: line-through;
-    color: #888;
+    color: #333;
 }
 
 .modal-details .modal-price.discounted {
-    color: #e74c3c; /* Red for discounted price */
+    color:  var(--red-color);
 }
 
-.modal-details .products_star {
-    margin: 15px 0;
-}
 
-.modal-details .products_star i {
-    color: #f1c40f; /* Gold stars */
-    margin-right: 5px;
-}
-
-/* Questions Section */
-.questions {
-    margin-top: 20px;
-}
-
-.questions p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.questions label {
-    font-weight: 600;
-}
-
-.questions select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Modal Footer */
-.modal-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #ddd;
-}
-
+/* Badge */
 .badge-container {
     position: relative;
     margin-bottom: 20px;
+   
+    padding: 5%;
+    margin-top: 2%
 }
 
 .badge-text {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #ff2109; /* Red background */
-    padding: 15px;
-    border-radius: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background-color:   var(--red-color);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
     text-transform: uppercase;
     width: 100%;
-    text-align: center;
 }
-.modal-footer{
-  
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-}
+
 /* Shop Now Button */
 .shop-now button {
-    background-color: #06b10f; /* Blue background */
-    color: #fff;
+    background-color: #06b10f;
+    color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 8px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    
+    transition: background-color 0.3s;
 }
 
 .shop-now button:hover {
-    background-color: #41b929; /* Darker blue on hover */
+    background-color: #41b929;
 }
 
-/* Mobile Specific Styles */
-@media (max-width: 768px) {
-
-    .modal {
-        padding: 1%;
-        width: 100%; /* Increased padding for mobile */
-    }
-
-    .modal-content {
-        width: 80%; /* Make it slightly smaller than the viewport width */
-        width: 80% !important; /* Ensure it does not exceed viewport width */
-        margin: 0 auto; /* Center the content */
-        padding: 1%; /* Adjust padding */
-    }
-
-    .modal-details h2 {
-        font-size: 20px;
-    }
-
-    .modal-details p {
-        font-size: 14px;
-    }
-
-    .modal-details select {
-        font-size: 14px;
-    }
-
-    .modal-details .modal-price {
-        font-size: 16px;
-    }
-
-    .modal-details .products_star i {
-        margin-right: 3px;
-    }
-
-    .modal-details .questions p {
-        font-size: 14px;
-    }
-
-    .modal-details .questions select {
-        font-size: 14px;
-    }
-
-    .modal-footer {
-        margin-top: 10px;
-    }
-
-    .badge-text {
-        font-size: 18px;
-    }
-
-    .shop-now button {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
+/* Footer Layout */
+.modal-footer {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 
-
-/* User Info Styles */
-.user-info {
-    padding: 15px;
-    background-color: #f9f9f9; /* Light gray background */
-    border-radius: 8px;
+/* Thank You Message */
+.thank-you-message {
+    text-align: center;
     margin-top: 20px;
 }
 
+.thank-you-message p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.thank-you-message span {
+    color:   var(--red-color);
+    font-weight: bold;
+}
+
+/* User Info */
+.user-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
 .user-info p {
-    margin: 10px 0;
-    font-size: 16px;
-    font-weight: 600;
+    margin: 12px 0;
+    font-size:  var(--small-font-size);
 }
 
 .user-info label {
-    display: block;
-    margin-bottom: 5px;
     font-size: 14px;
     color: #333;
 }
 
 .user-info input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    margin-bottom: 15px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .user-info input:focus {
-    border-color: #3498db; /* Blue border on focus */
-    outline: none;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Light blue shadow on focus */
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
 
-/* Style for input fields */
-.questions input[type="text"],
-.questions input[type="tel"],
-.questions select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box; /* Ensures padding does not increase element's width */
-}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
 
-.questions input[type="text"]:focus,
-.questions input[type="tel"]:focus,
-.questions select:focus {
-    border-color: #3498db; /* Blue border on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Add shadow effect on focus */
-}
+    .modal-details h2 {
+        font-size: 22px;
+    }
 
-/* Discounted Price Styling */
-#discountedPrice {
-    color: #ff1900; /* Red color for discounted price */
-    font-weight: bold; /* Optional: make the text bold */
-    font-size: 18px; /* Optional: adjust font size */
-}
+    .modal-details p {
+        font-size: 14px;
+    }
 
+    .shop-now button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 
-#productQuantity {
-    font-weight: bold;
-    text-decoration: underline;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size:  24px;
-    outline: none;
-    font-weight: 800;
-    width: 50%; /* Adjust width based on your design */
-}
-
-#productQuantity:focus {
-    border-color: #3498db; /* Blue border on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Add shadow effect on focus */
-}
-#productQuantity  input {
-    text-decoration:  none;
-}
-
-#totalPrice {
-    font-weight: bold;
-  
-    font-size: 18px;
-    color:#ff1900; /* You can change this color to match your design */
-    margin-top: 10px;
-   
-}
-
-
-.modal {
-    /* existing styles */
-    /* Ensure the modal is positioned correctly */
-}
-
-.modal-content {
-    /* existing styles */
-    /* Ensure the modal content is well-styled */
-}
-
-.modal-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.thank-you-message {
-    text-align: center;
-    margin-top: 18px;
-    margin-bottom: 16px;
-}
-
-.thank-you-message p {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-.thank-you-message span {
-    color: #ff1900;
-    font-weight: bold;
-}
-
-
-
-.close:hover {
-    background-color: #06b10f; /* Hover effect */
+    .badge-text {
+        font-size: 18px;
+    }
 }
