@@ -334,8 +334,7 @@ header .right {
 
 .products .box .card {
     width: 300px;
-    height: 400px;
-    display: flex;
+    height: 350px; display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensures content fills the card evenly */
     box-shadow: rgba(0, 0, 0, 0.12) 0px 20px 25px -5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -5px;
@@ -387,13 +386,13 @@ header .right {
 /* Product name and price styling */
 .product-name {
     display: block;
-    font-size: 1.2rem; /* Slightly larger for Apple devices */
-    font-weight: 500;
+    font-size: 1rem; /* Slightly larger for Apple devices */
+    font-weight: 400;
     margin-bottom: 4px;
 }
 
 .price-tag{
-    padding: 5px  0px ;
+    padding: 8px  0px ;
     display: flex;
     justify-content: center;
    
@@ -401,9 +400,9 @@ header .right {
 
 .product-price {
     display: flex;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 }
 
 .del {
