@@ -318,6 +318,13 @@ header {
     margin-bottom: 4px;
 }
 
+.price-tag{
+    padding: 5px  0px ;
+    display: flex;
+    justify-content: center;
+   
+}
+
 .product-price {
     display: flex;
     font-size: 1rem;
