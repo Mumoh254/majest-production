@@ -965,7 +965,7 @@ color:  #333 ;
 }
 
 
-/* Modal container */
+
 
 /* Back to top button */
 .back-to-top {
@@ -973,13 +973,13 @@ color:  #333 ;
     bottom: 60px;
     right: 20px;
     display: none; /* Hidden by default */
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #ff1900; /* Red color for the button */
     color: white;
     text-align: center;
-    line-height: 50px;
-    font-size: 30px;
+    line-height: 40px;
+    font-size: 18px;
     border-radius: 50%;
     z-index: 1000;
     cursor: pointer;
