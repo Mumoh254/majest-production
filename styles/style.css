@@ -500,21 +500,22 @@ color:  #333 ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
 /* Product name and price styling */
 .product-name {
     display: block;
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 5px;
+    font-size: var(--medium-font-size);
+    font-weight: 500;
+    margin-bottom: 4px;
 }
 
 .product-price {
     display: block;
-    font-size: 16px;
+    font-size: var(--small-font-size);
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 /* Discount badge styling */
@@ -524,8 +525,8 @@ color:  #333 ;
     color: #ffffff;
     padding: 8px 10px;
     border-radius: 5px;
-    font-size: 10px;
-    font-weight: bold;
+    font-size: var(--medium-font-size);
+    font-weight: 700;
     width: 100%;
 }
 
@@ -563,7 +564,7 @@ color:  #333 ;
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .social-icon {
@@ -606,11 +607,13 @@ color:  #333 ;
 
 .copy-section{
 
-    padding: 2%;
+
     display: flex;
     justify-content: center;
     font-size: var(--small-font-size);
     letter-spacing: 1px;
+   
+    width: 100% !important;
 }
 .footer-bottom {
     margin-top: 10px;
@@ -618,7 +621,7 @@ color:  #333 ;
     padding: 15px;
     color: #ffffff;
     max-width: 1200px;
-    width: 80%;
+    width: 100%;
     background:   var(--red-color);
     font-size:   var(--small-font-size);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
