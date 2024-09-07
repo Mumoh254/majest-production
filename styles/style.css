@@ -138,7 +138,7 @@ header .right {
     border-radius: 50%;
 }
 
-.cart  .title  {
+.cart  .title  a {
     text-transform:   uppercase;
     color: #ff1900;
     font-weight: 600;
