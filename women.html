@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Majesty  Shoe  Collection </title>
 
+    <!--    AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  
     <!--   linking   custom  css  -->
        <link rel="stylesheet" href="./styles/style.css">
@@ -34,31 +36,25 @@
         <div class="left">
             <ul class="main">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="sneakers.html">sneakers</a></li>
-                 <li><a href="men.html">Men</a></li>
-                 <li><a href="women.html">Women</a></li>
-                 <li><a href="kids.html">Kid's</a></li>
-                 <!-- <li><a href="#">Girl's</a></li>
-                <li><a href="#">Boy's</a></li>   -->
+                <li><a href="sneakers.html">Sneakers</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="kids.html">Kid's</a></li>
             </ul>
-            </div>
-            <div class="logo">
-                 <img id="j-3" src="./assets/Images/header/j-3-removebg-preview.png" loading="lazy"  alt="majesty  home  image   not  loading " >
-            </div>
-            <div class="right">
+        </div>
+        <div class="logo">
+            <img id="j-3" src="./assets/Images/header/j-3-removebg-preview.png" loading="lazy" alt="majesty home image not loading">
+        </div>
+        <div class="right">
+            <div class="cart">
+                <ul>
+                    <a href="#">Majesty Collections</a>
+                </ul>
                
-                <div class="wish-cart">
-                    <ul>
-                        <li><a href="#"><img  id="heart" src="./assets/Images/header/heart_image-removebg-preview.png" loading="lazy"  alt="majesty " ></a></li>
-                     
-                    </ul>
-
-                    <span>
-                        Majesty   Collections
-                    </span>
-                </div>
             </div>
-        </header>
+        </div>
+    </header>
+    
 
     <!--    header  -- section   -->
 
@@ -89,15 +85,10 @@
 
     <div class="products" id="Products">
 
-        <br>
-
-        <h1>Products</h1>
-
-        <br>
-
-
+        
 
         <div class="box">
+            
 <!-- Modal -->
 <div id="productModal" class="modal">
     <div class="modal-content">
@@ -162,12 +153,12 @@
         <!-- Product Card Template -->
 
         
-<div class="card" onclick="openModal('women  shoes', '39 - 40', 8000, 3000, './assets/Images/women/women1.png', ['Red', 'Blue', 'Green', 'Black' ,'Yellow '])">
+<div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker1.png', ['Red', 'Blue', 'Green', 'Black'])">
     <div class="small_card">
         <span class="discount-badge">50% OFF</span>
     </div>
     <div class="image">
-        <img src="./assets/Images/women/women1.png" alt="Air Max" loading="lazy">
+        <img src="./assets/Images/sneakers/sneaker1.png" alt="Air Max" loading="lazy">
     </div>
     <div class="product-info">
         <span class="product-title product-name">Air Max</span>
@@ -196,12 +187,12 @@
 
 
             !-- Product Card Example -->
-            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/women/women2.png', ['red', 'blue', 'green', 'black'])">
+            <div class="card" onclick="openModal('Air Max', '37 - 38', 4000, 8000, './assets/Images/sneakers/sneaker2.png', ['red', 'blue', 'green', 'black'])">
                 <div class="small_card">
                     <span class="discount-badge">50% OFF</span>
                 </div>
                 <div class="image">
-                    <img src="./assets/Images/women/women2.png" alt="Air Max" loading="lazy">
+                    <img src="./assets/Images/sneakers/sneaker2.png" alt="Air Max" loading="lazy">
                 </div>
                 <div class="product-info">
                     <span class="product-title product-name">Air Max</span>
@@ -1822,8 +1813,9 @@
     <!--     footer   section -->
 
         
-    <footer class="footer">
-        <div class="footer-container">
+
+    <footer class="footer"  data-aos="fade-up">
+        <div class="footer-container  "  >
             <div class="footer-section about">
                 <h2 class="footer-title">About Us</h2>
                 <p>We are committed to bringing you the best in footwear. Our exclusive collection features top brands and the latest trends.</p>
@@ -1943,6 +1935,11 @@
   
     <script src="/Script/whatsapp.js"></script>
 
+    <!--   AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     
 </body>
 </html>
