@@ -59,7 +59,7 @@ function sendWhatsAppMessage() {
     const totalPrice = quantity * discountedPrice;
     const productImage = document.getElementById('modalImage').src;
     const userName = document.getElementById('userName').value;
-    const userMobile = document.getElementById('userMobile').value;
+    const userMobile = document.getElementById('userMobile').   value;
     const userLocation = document.getElementById('userLocation').value;
 
     if (!userName || !userMobile || !userLocation) {
@@ -88,7 +88,7 @@ function sendWhatsAppMessage() {
     const whatsappNumber = "254740045355"; 
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, '_blank');
-}
+}                         
 
 // Close modal when clicking outside the modal content
 window.onclick = function(event) {

@@ -271,14 +271,16 @@ header {
 
 .products .box .card{
    
-    width: 240px;
+    width: 300px;
     
-    height: 340px;
+    height: 400px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     border-radius: 5px;
     text-align: center;
-    padding: 10px 20px;
+    padding: 10px 5px;
     background: #ffffff;
+ 
+    overflow: hidden;
    
 }
 
@@ -303,21 +305,24 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    width: 100% !important;
 
     width: 100%;
-    height: 60%;
+    height: 50%;
     overflow: hidden;
 }
 
 .products .box .card .image img{
-    height: 60%;
+    height: 100%;
    
     margin: 1px 0;
     transition: 0.3s;
+    
 }
 
 .products .box .card:hover .image img{
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 
@@ -325,7 +330,7 @@ header {
 
 
 .fa-shoe-prints{
-    font-weight: 400;
+    font-weight: 300 ;
     
 }
 .price {
@@ -349,7 +354,7 @@ header {
 }
 .products_star   i  {
     color: var(--green-color);
-    font-size: 8px;
+    font-size: var(--small-font-size);
 }
 
 .price .del{
@@ -360,7 +365,7 @@ color:  #333 ;
     color: var(--red-color);
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: var(--small-font-size);
+    font-size: var(--medium-font-size);
 
 }
 
@@ -384,6 +389,7 @@ color:  #333 ;
     .products {
        
         width: 100%;
+     
       
        
     }
@@ -393,20 +399,22 @@ color:  #333 ;
         grid-gap: 20px;
       
         width: 100%;
+     
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
 
     .products .box .card {
-        width: 200px !important;
-        height: 320px !important;
+        width: 185px !important;
+        height: 350px !important;
+   
       
     }
 
     .products .box .card .image img {
-        width: auto;
-        height: 155px;
+        max-width:  100%;
+        height: 200px;
     }
 
     .products .box .card .products_text h2 {
@@ -416,7 +424,8 @@ color:  #333 ;
     
         width: 100% !important;
         padding: 0;
-        max-height: 190px !important;
+        max-height: auto !important;
+       
     }
 }
 
@@ -426,17 +435,20 @@ color:  #333 ;
     }
 
     .products .box {
-        grid-template-columns: 1fr;
+        padding: 2px;
+        grid-template-columns: 2fr;
         grid-gap: 15px;
+       
     }
 
     .products .box .card {
         width: 100%;
         height: auto;
+      
     }
 
     .products .box .card .products_text h2 {
-        font-size: 20px;
+        font-size:  var(--small-font-size);
     }
 }
 
