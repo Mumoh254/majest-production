@@ -350,6 +350,7 @@ header .right {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 25px 30px -10px, rgba(0, 0, 0, 0.1) 0px 15px 20px -10px;
 }
 
+
 /* Ensuring image fits the card properly */
 .products .box .card .image {
     display: flex;
@@ -994,4 +995,40 @@ header .right {
 /* Show button when page is scrolled down */
 .show {
     display: block;
+}
+
+
+/* Styling for the top section */
+.tops {
+    background-color: #06b10f; /* Sleek green background */
+    color: #ffffff; /* White text for contrast */
+    padding: 5px 10px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for a subtle effect */
+    width: 100%;
+}
+
+.tops h3 {
+    margin: 0;
+    font-size: 0.9rem; /* Smaller text for a sleek appearance */
+    letter-spacing: 0.5px; /* Slight letter spacing for readability */
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .tops h3 {
+        font-size: 0.8rem; /* Slightly smaller for mobile screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tops h3 {
+        font-size: 0.7rem; /* Even smaller text for extra small devices */
+        letter-spacing: 0.3px;
+    }
 }
