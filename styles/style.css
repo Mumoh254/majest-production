@@ -365,9 +365,7 @@ header {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
    
-    .products{
-      
-    }
+    
     .products .box {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
@@ -498,6 +496,8 @@ header {
 .subscribe-form .btn:hover {
     background-color:  var(--red-color);
 }
+
+
 
 .copy-section{
 
@@ -701,7 +701,7 @@ header {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
 }
-/* Styling for the icons to remain fixed */
+/* Styling for the icons to remain fixed at the bottom */
 .bottom-social-icons {
     display: flex;
     justify-content: center;
@@ -711,10 +711,9 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    background-color: white;
-  
-    padding: 10px 0;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* A sleek white background */
+    padding: 8px 0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 }
 
 .icon {
@@ -722,27 +721,48 @@ header {
 }
 
 .icon img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
+    width: 30px; /* Regular size for larger screens */
+    height: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    padding: 5px;
 }
 
 .icon img:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
     .bottom-social-icons {
-      
-        padding: 5px 0;
+        width: 100%; /* Reduced width for smaller devices */
+        padding: 5px 70px;
+    }
+
+    .icon {
+        margin: 0 5px; /* Reduced space between icons */
     }
 
     .icon img {
-       
-        height: 18px;
+        width: 22px; /* Smaller icon size for mobile devices */
+        height: 22px;
     }
 }
+
+/* Responsive design for tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .bottom-social-icons {
+        width: 100%; /* Slightly larger width for tablets */
+    }
+
+    .icon img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
 
 /* Modal Styling */
 .modal {
