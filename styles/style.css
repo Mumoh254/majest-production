@@ -871,9 +871,7 @@ header .right {
     color: #ff1900; /* Red for the close button */
 }
 
-.closes:hover {
-    color: #06b10f; /* Green on hover */
-}
+
 
 .call-button {
     background-color: #ff1900; /* Red for call buttons */
