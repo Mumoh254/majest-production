@@ -39,27 +39,33 @@ body{
 }
 
 /*  */
-
-/* Header   -- amin -- styles */
-/* Header Styles */
 header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #ffffff; /* Clean white background */
+    background-color: #ffffff;
     color: var(--dark-color);
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 200;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 header:hover {
     background-color: #f9f9f9;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Flexbox alignment for mobile responsiveness */
+header .left,
+header .logo,
+header .right {
+    display: flex;
+    align-items: center;
 }
 
 /* Left Menu Styling */
@@ -85,6 +91,10 @@ header:hover {
 }
 
 /* Logo Styling */
+.logo {
+    margin-left: 10px; /* Adds space between logo and menu */
+}
+
 .logo img {
     max-width: 120px;
     height: auto;
@@ -128,22 +138,31 @@ header:hover {
     border-radius: 50%;
 }
 
-/* Responsive Design Adjustments */
+/* Adjustments for Small Screens */
 @media (max-width: 768px) {
     header {
-        padding: 10px 20px;
+        flex-direction: column;
+        padding: 10px 15px;
     }
 
+    /* Menu, logo, and cart stack vertically */
     .left ul.main {
+      
         gap: 15px;
-    }
-
-    .left ul.main li a {
-        font-size: var(--font-size-medium);
+        margin-bottom: 10px;
+        width: 100%;
+        
+        display: flex;
+        justify-content: space-evenly;
     }
 
     .logo img {
-        max-width: 90px;
+        max-width: 100px;
+        margin: 10px 0;
+    }
+
+    .right .cart {
+        justify-content: center;
     }
 
     .right .cart ul a {
@@ -156,9 +175,10 @@ header:hover {
     }
 }
 
+/* Adjustments for Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
-        padding: 12px 25px;
+        padding: 12px 20px;
     }
 
     .left ul.main {
@@ -166,7 +186,7 @@ header:hover {
     }
 
     .logo img {
-        max-width: 100px;
+        max-width: 110px;
     }
 
     .right .cart ul a {
