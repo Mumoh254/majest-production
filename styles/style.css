@@ -27,7 +27,7 @@ body{
     --light-color:  #333;
     --red-color: #ff1900;
     --green-color:  #06b10f;
-    --small-font-size:  1rem;
+    --small-font-size:  0.8rem;
     --medium-font-size:  1.3rem;
     --larger-font-size:  1.7rem;
     --large-font-size:  2rem;
@@ -525,8 +525,8 @@ color:  #333 ;
     color: #ffffff;
     padding: 8px 10px;
     border-radius: 5px;
-    font-size: var(--medium-font-size);
-    font-weight: 700;
+    font-size: var(--small-font-size);
+    font-weight: 600;
     width: 100%;
 }
 
