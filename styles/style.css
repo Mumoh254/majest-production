@@ -746,8 +746,8 @@ header {
     }
 
     .icon img {
-        width: 22px; /* Smaller icon size for mobile devices */
-        height: 22px;
+        width: 24px; /* Smaller icon size for mobile devices */
+        height: 24px;
     }
 }
 
