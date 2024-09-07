@@ -419,8 +419,8 @@ header .right {
 
 /* Ratings in green */
 .products_star i {
-    color: var(--green-color);
-    font-size: 1rem;
+    color: var(--green-color) !important;
+    font-size: 0.5rem;
 }
 
 /* Discount badge styling */
@@ -428,10 +428,10 @@ header .right {
     display: inline-block;
     background-color: #ff1900;
     color: #ffffff;
-    padding: 4px 10px;
+    padding: 2px 5px;
     border-radius: 5px;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.7rem;
+    font-weight: 400;
     width: 80%;
 }
 
