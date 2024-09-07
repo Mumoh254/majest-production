@@ -141,7 +141,7 @@ header .right {
 .cart  .title  a {
     text-transform:   uppercase;
     color: #ff1900;
-    font-weight: 600;
+    font-weight: 700;
 }
 /* Adjustments for Small Screens */
 @media (max-width: 768px) {
