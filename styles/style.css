@@ -247,7 +247,7 @@ header {
 }
 
 .products .box {
-    width: 90%;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px, rgba(0, 0, 0, 0.1) 0px 8px 15px -5px, rgba(0, 0, 0, 0.06) 0px -3px 0px inset;
     margin: 0 auto;
     display: grid;
@@ -257,6 +257,7 @@ header {
     align-items: center;
     justify-items: center;
     text-align: center;
+   
 }
 
 .products .box .card {
@@ -267,7 +268,7 @@ header {
     justify-content: space-between; /* Ensures content fills the card evenly */
     box-shadow: rgba(0, 0, 0, 0.12) 0px 20px 25px -5px, rgba(0, 0, 0, 0.06) 0px 10px 10px -5px;
     border-radius: 10px;
-    padding: 15px 10px;
+    padding: 15px 8px;
     background: #ffffff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -290,7 +291,7 @@ header {
 .products .box .card .image img {
     width: 100%; /* Ensures image covers the entire width */
     height: 100%; /* Ensures image fills the height */
-    object-fit: cover; /* Keeps the image aspect ratio intact while covering the area */
+    object-fit: contain; /* Keeps the image aspect ratio intact while covering the area */
     transition: transform 0.3s ease;
 }
 
@@ -363,10 +364,10 @@ header {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .products h1 {
-        font-size: 2rem;
+   
+    .products{
+        background: #000;
     }
-
     .products .box {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
