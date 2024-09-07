@@ -227,8 +227,7 @@ header {
   }
   
 
-
-/*    products  styles   */
+/* Products styles */
 
 .products {
     width: 100%;
@@ -303,7 +302,6 @@ header {
 .product-info {
     text-align: center;
     padding: 10px 0;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 4px 0px inset;
     width: 100%;
     flex-grow: 1; /* Makes the info section grow to fill available space */
     display: flex;
@@ -321,10 +319,27 @@ header {
 }
 
 .product-price {
-    display: block;
+    display: flex;
     font-size: 1rem;
     color: #333;
     margin-bottom: 8px;
+}
+
+.del {
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.price .span {
+    color: var(--red-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Ratings in green */
+.products_star i {
+    color: var(--green-color);
+    font-size: 1rem;
 }
 
 /* Discount badge styling */
