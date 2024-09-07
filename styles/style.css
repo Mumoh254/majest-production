@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @font-face {
     font-family: 'web';
     src: url('/assets/fonts/Chopin_Trial/Trial/WEB/Chopin-Trial-Light.woff') format('woff2');
@@ -14,7 +14,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "open-sans";
+    font-family: "Montserrat";
 }
 
 body{
@@ -121,12 +121,11 @@ header {
 }
 
 
-/*    banner   -- style */
 
 
 /* Banner Styles */
 
-  /* Slider Container */
+
   .slider-container {
     display: flex;
  
@@ -232,7 +231,7 @@ header {
 /*    products  styles   */
 
 
-/*Products*/
+
 
 .products{
     width: 100%;
@@ -242,10 +241,11 @@ header {
 }
 
 .products h1{
-    margin: 35px 0;
+    margin: 75px 0;
     font-size: var(--large-font-size);
     display: flex;
     align-items: center;
+  
     justify-content: center;
     text-transform: uppercase;
     background: linear-gradient(to right, #c72092,#6c14d0);
@@ -260,18 +260,19 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Creates a 4-column grid */
     grid-gap: 25px; /* Sets the gap between items */
-    font-family: 'web'; /* Ensure this font is properly loaded or use a fallback */
+   
     padding: 25px 0; /* Adjust padding for vertical spacing */
 
-    align-items: center; /* Centers items vertically within the grid cells */
-    justify-items: center; /* Centers items horizontally within the grid cells */
-    text-align: center; /* Optional: centers text within the grid cells */
+    align-items: center; 
+    justify-items: center; 
+    text-align: center; 
 }
 
 
 .products .box .card{
    
     width: 240px;
+    
     height: 340px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     border-radius: 5px;
@@ -325,7 +326,7 @@ header {
 
 .fa-shoe-prints{
     font-weight: 400;
-    font-size:   var(--small-font-size);
+    
 }
 .price {
    
@@ -354,11 +355,12 @@ header {
 .price .del{
 color:  #333 ;
 }
-.price,
+.price
  .span {
     color: var(--red-color);
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 1px;
+    font-size: var(--small-font-size);
 
 }
 
@@ -371,7 +373,6 @@ color:  #333 ;
 
 
 
-/* Mobile view (up to 767px wide) */
 
 
 /* Media Queries for Mobile Devices */
@@ -480,7 +481,7 @@ color:  #333 ;
 .product-info {
     text-align: center;
    padding: 10px  0px;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 4px 0px inset;
     width: 100%;
     padding-bottom: 10px;
     display: flex;
@@ -518,10 +519,10 @@ color:  #333 ;
 
 .footer {
     background: #ffff !important;
-    color: #000000;
+    color: #333;
     padding: 40px 20px;
     
-    font-family: var(--font-family), Arial, sans-serif;
+    font-family: var(--font-family);
     font-size:   var(--small-font-size);
 }
 
@@ -543,7 +544,7 @@ color:  #333 ;
 }
 
 .footer-section p {
-    font-size: 0.95em;
+    font-size:  var(--small-font-size);
     line-height: 1.5;
     color: #333;
 }
@@ -596,6 +597,8 @@ color:  #333 ;
     padding: 2%;
     display: flex;
     justify-content: center;
+    font-size: var(--small-font-size);
+    letter-spacing: 1px;
 }
 .footer-bottom {
     margin-top: 10px;
@@ -626,6 +629,7 @@ color:  #333 ;
 .copy-right {
     margin-bottom: 3rem;
     color: #ffffff;
+    font-size: var(--small-font-size);
   
 }
 
@@ -822,12 +826,12 @@ color:  #333 ;
 @media screen and (max-width: 768px) {
     .bottom-social-icons {
       
-        padding: 8px 0;
+        padding: 5px 0;
     }
 
     .icon img {
        
-        height: 25px;
+        height: 18px;
     }
 }
 
