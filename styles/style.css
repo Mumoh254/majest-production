@@ -366,7 +366,7 @@ header {
 @media (max-width: 768px) {
    
     .products{
-        background: #000;
+      
     }
     .products .box {
         grid-template-columns: repeat(2, 1fr);
