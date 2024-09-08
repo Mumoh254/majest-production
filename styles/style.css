@@ -1448,5 +1448,8 @@ nav ul li a:hover {
       font-size: 0.9rem;  
     }
 
+    .stats.count{
+        font-size:  0.7rem;
+    }
  
 }
