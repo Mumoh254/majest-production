@@ -1425,6 +1425,7 @@ nav ul li a:hover {
 
     .stat{
 
+        font-size: 0.6rem;
     }
 
     .category-items{
@@ -1444,7 +1445,7 @@ nav ul li a:hover {
   
 
     .service-item, .product-item, .step, .featured-item, .testimonial-item {
-        width: 90%;
+      font-size: 0.9rem;  
     }
 
  
