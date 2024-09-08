@@ -469,6 +469,7 @@ header .right {
 
         max-width: 100%;
         height: 100% !important;
+        object-fit: contain !important;
     }
 
     .products .box .card .products_text h2 {
