@@ -459,7 +459,8 @@ header .right {
 
     .products  .box  .card  .image{
         height: 250px;
-        overflow: hidden;
+        overflow: hidden !important;
+   
    
     }
     .products .box .card .image img {
