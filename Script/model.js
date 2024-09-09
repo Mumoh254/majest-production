@@ -95,8 +95,13 @@ function sendWhatsAppMessage() {
     
         const whatsappNumber = "254740045355"; 
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappLink, '_blank');
-
+        setTimeout(function() {
+            // Hide the processing message after delay
+            processingMessage.style.display = "none";
+            
+            // Open WhatsApp link in a new tab
+            window.open(whatsappLink, '_blank');
+        }, 3000); // Delay of 2 seconds
 
   
     
