@@ -12,6 +12,17 @@
 }
 
 
+:root{
+    --main-color: #ffffff;
+    --light-color:  #333;
+    --red-color: #ff1900;
+    --green-color:  #06b10f;
+    --small-font-size:  0.9rem;
+    --medium-font-size:  1.2rem;
+    --larger-font-size:  1.5rem;
+    --large-font-size:  2rem;
+
+}
 
 /* Hide scrollbars in Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {

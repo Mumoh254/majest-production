@@ -27,9 +27,9 @@ body{
     --light-color:  #333;
     --red-color: #ff1900;
     --green-color:  #06b10f;
-    --small-font-size:  1rem;
-    --medium-font-size:  1.3rem;
-    --larger-font-size:  1.7rem;
+    --small-font-size:  0.9rem;
+    --medium-font-size:  1.2rem;
+    --larger-font-size:  1.5rem;
     --large-font-size:  2rem;
 
 }
@@ -43,11 +43,12 @@ body{
     top: 0;
     z-index: 400;
 
-}
+}  
 .header-top   {
   top: 2%;
   position: fixed;
   z-index: 200;
+  padding-top: 10px;
 }
 /*  */
 header {
@@ -88,7 +89,7 @@ header .right {
     color: var(--dark-color);
     text-decoration: none;
     font-weight: bold;
-    font-size: var(--font-size-large);
+    font-size: var(--small-font-size);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -122,9 +123,10 @@ header .right {
 .right .cart ul a {
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: var(--font-size-large);
     transition: color 0.3s ease;
+ 
 }
 
 .right .cart ul a:hover {
