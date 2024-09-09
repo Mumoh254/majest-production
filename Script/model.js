@@ -101,7 +101,7 @@ function sendWhatsAppMessage() {
             
             // Open WhatsApp link in a new tab
             window.open(whatsappLink, '_blank');
-        }, 3000); // Delay of 2 seconds
+        }, 4000); // Delay of 2 seconds
 
   
     
