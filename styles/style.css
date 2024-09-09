@@ -38,6 +38,17 @@ body{
      scroll-behavior: smooth;
 }
 
+.tops{
+    position: fixed;
+    top: 2;
+    z-index: 400;
+    
+}
+.header-top   {
+  top: 0;
+  position: sticky;
+  z-index: 200;
+}
 /*  */
 header {
     width: 100%;
