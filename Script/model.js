@@ -1,3 +1,5 @@
+
+
 // Function to open the modal with dynamic product details
 function openModal(productName, sizes, discountedPrice, originalPrice, productImage, colors) {
     document.getElementById('productModal').style.display = "block";
@@ -67,28 +69,38 @@ function sendWhatsAppMessage() {
         return;
     }
 
-    const message = `Hi there! 👋
+       // Display "Processing your order..." message
+       const processingMessage = document.getElementById('processingMessage');
+       processingMessage.style.display = "block";
 
-    I'm interested in purchasing the following product:
-    *Product Name:* ${productName}
-    *Size:* ${productSize}
-    *Color:* ${productColor}
-    *Price per Item:* KSH ${discountedPrice.toFixed(2)}
-    *Quantity:* ${quantity}
-    *Total Price:* KSH ${totalPrice.toFixed(2)}
-    *Product Image:* ${productImage}
-    *User Information:*
-    *Name:* ${userName}
-    *Mobile Number:* ${userMobile}
-    *Location:* ${userLocation}
-    Looking forward to your response!
+     
 
-   Thank you ! for shopping with us at *Majesty Collections*.  We value your business and   we are here to assist with any further inquiries 😊`;
+        const message = `Hi there! 👋
 
-    const whatsappNumber = "254740045355"; 
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, '_blank');
-}                         
+        I'm interested in purchasing the following product:
+        *Product Name:* ${productName}
+        *Size:* ${productSize}
+        *Color:* ${productColor}
+        *Price per Item:* KSH ${discountedPrice.toFixed(2)}
+        *Quantity:* ${quantity}
+        *Total Price:* KSH ${totalPrice.toFixed(2)}
+        *Product Image:* ${productImage}
+        *User Information:*
+        *Name:* ${userName}
+        *Mobile Number:* ${userMobile}
+        *Location:* ${userLocation}
+        Looking forward to your response!
+    
+       Thank you ! for shopping with us at *Majesty Collections*.  We value your business and   we are here to assist with any further inquiries 😊`;
+    
+        const whatsappNumber = "254740045355"; 
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, '_blank');
+
+
+  
+    
+}                     
 
 // Close modal when clicking outside the modal content
 window.onclick = function(event) {

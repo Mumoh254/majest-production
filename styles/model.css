@@ -57,7 +57,7 @@ html {
     border-radius: 12px;
     width: 100%;
     max-width: 800px;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     height: auto;
     overflow-y: auto;
     position: relative;
@@ -75,7 +75,7 @@ html {
 }
 
 .close:hover {
-    background-color: #ff1900; /* Accent color for hover */
+  
     color: #fff;
     border-radius: 50%;
 }
@@ -85,164 +85,187 @@ html {
     width: 100%;
     height: auto;
     border-radius: 8px; /* Sleeker rounded corners */
-    object-fit: cover; /* Better fit for images */
+    object-fit: contain; /* Better fit for images */
     margin-bottom: 20px;
 }
-
 /* Modal Details */
 .modal-details {
-    padding: 15px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Modern, stylish font */
 }
 
 /* Product Title */
 .modal-details h2 {
-    font-size: 1.8rem; /* Responsive font size */
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #000000;
+    font-size: 2rem; /* Slightly larger, more impactful font size */
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #000000; /* Deep black for elegance */
+    letter-spacing: 1px; /* Slightly spaced out for a sleek look */
 }
 
 /* Price and Info Text */
 .modal-details p {
-    font-size: 1rem;
-    margin: 8px 0;
+    font-size: 1.1rem;
+    margin: 10px 0;
     color: #000000;
 }
 
 /* Select Element */
 .modal-details select {
     width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #fafafa; /* Soft background color */
+    transition: border-color 0.3s ease;
+}
+
+.modal-details select:hover {
+    border-color: #06b10f; /* Light hover border for interaction */
 }
 
 /* Price Section */
 .modal-details .modal-price {
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 12px;
 }
 
 .modal-details .modal-price.del {
     text-decoration: line-through;
-    color: #333;
+    color: #ff0000  !important; /* Softer gray for original price */
 }
 
 .modal-details .modal-price.discounted {
-    color: #ff1900;
+    color: #ff1900; /* Highlighted discount */
 }
 
 /* Badge */
 .badge-container {
     position: relative;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
- 
-    margin-top: 20px;
+    text-align: center;
 }
 
 .badge-text {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #fff;
-    background-color: #ff1900; /* Red badge color */
-    padding: 12px 50px;
+    background-color: #ff1900; /* Red badge for urgency */
+    padding: 15px 60px;
     border-radius: 8px;
-    text-align: center;
     text-transform: uppercase;
-    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 /* Shop Now Button */
 .shop-now button {
-    margin-top: 30px  !important;
+    margin-top: 30px !important;
     background-color: #06b10f;
     color: #fff;
     border: none;
-    padding: 12px 50px;
+    padding: 14px 60px;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .shop-now button:hover {
     background-color: #41b929;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 /* Footer Layout */
 .modal-footer {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     border-top: 1px solid #ddd;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 /* Thank You Message */
 .thank-you-message {
     text-align: center;
-    margin: 30px 0; /* Increased margin for better spacing */
-    padding: 20px;
-    background-color: #f5f5f5; /* Light background for contrast */
+    margin-bottom:  1%;
+    padding: 25px;
+    background-color: #fffbfb;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px; /* Subtle shadow for depth */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .thank-you-message p {
-    font-size: 2rem; /* Larger font size for better readability */
-    margin: 6% 0; /* Adjusted margin */
-    color: #333; /* Darker text for better contrast */
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+    margin: 6%;
 }
 
 .thank-you-message span {
-    color: #ff1900; /* Accent color for emphasis */
-    font-weight: bold; /* Bold text for prominence */
-    font-size: 1.4rem; /* Slightly larger for better visibility */
+    color: #ff1900;
+    font-weight: 700;
+    font-size: 1.6rem;
 }
 
 /* User Info */
 .user-info {
-    padding: 15px;
+    padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for user info section */
 }
 
 .user-info p {
-    margin: 10px 0;
-    font-size: 1rem;
+    margin: 12px 0;
+    font-size: 1.1rem;
+    color: #333;
 }
 
 .user-info label {
-    font-size: 14px;
+    font-size: 1rem;
     color: #333;
+    font-weight: 600;
 }
 
 .user-info input {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
 }
 
 .user-info input:focus {
     border-color: #41b929;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
 }
 
 /* Product Rating Stars */
 .products_star {
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
 .products_star i {
-    color: #ff1900; /* Star color */
-    margin-right: 5px;
+    color: #ff1900;
+    margin-right: 6px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .modal-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .shop-now button {
+        padding: 12px 40px;
+    }
 }
 
 /* Mobile Responsive */
