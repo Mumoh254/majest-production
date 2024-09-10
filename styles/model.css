@@ -21,6 +21,7 @@
     --medium-font-size:  1.2rem;
     --larger-font-size:  1.5rem;
     --large-font-size:  2rem;
+    --model-font: Montserrat;
 
 }
 
@@ -93,23 +94,24 @@ html {
 /* Modal Details */
 .modal-details {
     padding: 20px;
-    font-family: 'Poppins', sans-serif; /* Modern, stylish font */
+   font-family:   "poppins";
 }
 
 /* Product Title */
 .modal-details h2 {
     font-size: 2rem; /* Slightly larger, more impactful font size */
     margin-bottom: 12px;
-    font-weight: 700;
+    font-weight: 900;
     color: #000000; /* Deep black for elegance */
     letter-spacing: 1px; /* Slightly spaced out for a sleek look */
 }
 
 /* Price and Info Text */
 .modal-details p {
-    font-size: 1.1rem;
-    margin: 10px 0;
+    font-size: 1.5rem;
+ 
     color: #000000;
+    font-weight: 700;
 }
 
 /* Select Element */
@@ -119,7 +121,7 @@ html {
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 1.1rem;
+    font-size:  var(--small-font-size);
     background-color: #fafafa; /* Soft background color */
     transition: border-color 0.3s ease;
 }
@@ -130,9 +132,9 @@ html {
 
 /* Price Section */
 .modal-details .modal-price {
-    font-size: 2rem;
+    font-size:  var(--medium-font-size);
     font-weight: 900;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 .modal-details .modal-price.del {
@@ -141,7 +143,7 @@ html {
 }
 
 .modal-details .modal-price.discounted {
-    color: #ff1900; /* Highlighted discount */
+    color: #ff1900  !important; /* Highlighted discount */
 }
 
 /* Badge */
@@ -154,8 +156,9 @@ html {
 }
 
 .badge-text {
-    font-size: 1.3rem;
-    font-weight: 700;
+   
+    font-size: var(--large-font-size);
+    font-weight: 900;
     color: #fff;
     background-color: #ff1900; /* Red badge for urgency */
     padding: 15px 60px;
@@ -166,7 +169,7 @@ html {
 
 /* Shop Now Button */
 .shop-now button {
-    margin-top: 30px !important;
+    margin: 30px !important;
     background-color: #06b10f;
     color: #fff;
     border: none;
@@ -216,7 +219,7 @@ html {
 
 /* User Info */
 .user-info {
-    padding: 20px;
+    padding: 20px  5px;
     background-color: #f9f9f9;
     border-radius: 10px;
     margin-top: 20px;
@@ -226,13 +229,13 @@ html {
 .user-info p {
     margin: 12px 0;
     font-size: 1.1rem;
-    color: #333;
+    color: #000000;
 }
 
 .user-info label {
     font-size: 1rem;
-    color: #333;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
 }
 
 .user-info input {
