@@ -1201,15 +1201,18 @@ nav ul li a:hover {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+  
 }
 
 .featured-item {
+   
     width: 300px;
     padding: 20px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .featured-item img {
