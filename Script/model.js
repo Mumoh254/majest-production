@@ -111,8 +111,6 @@ function sendWhatsAppMessage() {
             window.open(whatsappLink, '_blank');
         }, 4000); // Delay of 2 seconds
 
-  
-    
 }                     
 
 // Close modal when clicking outside the modal content
