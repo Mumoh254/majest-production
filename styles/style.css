@@ -1500,3 +1500,49 @@ nav ul li a:hover {
     z-index: 4000;
 }
 
+
+#originalPrice {
+    font-size: 1.2rem;
+    color: #06b10f; 
+  /* Red for original (crossed-out) price */
+    font-weight: bold;
+}
+
+#discountedPrice {
+    font-size: 1.7rem;
+    color: #ff1900; 
+  /* Green for discounted price */
+    font-weight: 900;
+}
+
+#totalPrice {
+    font-size: 1.6rem;
+    color: #ff1900;  /* Green for total price */
+    font-weight: 800;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+input[type="number"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+strong {
+    font-weight: bold;
+}
