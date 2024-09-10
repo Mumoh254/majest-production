@@ -849,7 +849,7 @@ header .right {
 @media screen and (max-width: 768px) {
     .bottom-social-icons {
         width: 100%; /* Reduced width for smaller devices */
-        padding: 8px 70px;
+        padding: 6px 70px;
     }
 
     .icon {
