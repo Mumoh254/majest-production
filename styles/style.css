@@ -20,7 +20,7 @@
 body{
     scroll-behavior: smooth;
     min-height: 100vh;
-    font-family: ;
+    font-family: Montserrat;
 }
 
 :root{
@@ -29,10 +29,10 @@ body{
     --red-color: #ff1900;
     --green-color:  #06b10f;
 
-        --small-font-size: 0.9rem;
-        --medium-font-size: 1.1rem;
-        --large-font-size: 1.4rem;
-        --xl-font-size: 2rem;
+        --small-font-size: 0.6rem;
+        --medium-font-size: 0.9rem;
+        --large-font-size: 1.2rem;
+        --xl-font-size: 1.5rem;
     }
 
 
