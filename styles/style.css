@@ -1210,7 +1210,7 @@ nav ul li a:hover {
     width: 300px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     padding: 10px;
-    font-size: var(--medium-font-size); /* Modern font size */
+    font-size: var(--small-font-size); /* Modern font size */
 }
 
 .featured-item img {
@@ -1227,7 +1227,7 @@ nav ul li a:hover {
     padding: 60px 20px;
     text-align: center;
     background-color: #f9f9f9;
-    font-size: var(--large-font-size); /* Attractive font size */
+    font-size: var(--small-font-size); /* Attractive font size */
 }
 
 .testimonial-container {
@@ -1245,7 +1245,7 @@ nav ul li a:hover {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 40px;
     text-align: center;
     transition: transform 0.3s ease;
-    font-size: var(--medium-font-size); /* Sleek font size for testimonials */
+    font-size: var(--small-font-size); /* Sleek font size for testimonials */
 }
 
 .testimonial-item:hover {
@@ -1265,13 +1265,16 @@ nav ul li a:hover {
     color: #333;
     line-height: 1.2;
     margin-bottom: 15px;
+    font-weight: 300;
 }
 
 .testimonial-item h4 {
-    font-size: var(--medium-font-size);
+    font-size: var(--small-font-size);
     font-weight: bold;
+ 
     color: #ff1900; /* Bold and modern color for the heading */
     margin: 0;
+    font-weight: 300;
 }
 
 .testimonial-item span {
@@ -1375,4 +1378,44 @@ select {
 
 strong {
     font-weight: bold;
+}
+
+
+
+.tracking-in-contract-bck-bottom {
+	-webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+ 0% {
+   letter-spacing: 1em;
+   -webkit-transform: translateZ(400px) translateY(300px);
+           transform: translateZ(400px) translateY(300px);
+   opacity: 0;
+ }
+ 40% {
+   opacity: 0.6;
+ }
+ 100% {
+   -webkit-transform: translateZ(0) translateY(0);
+           transform: translateZ(0) translateY(0);
+   opacity: 1;
+ }
+}
+@keyframes tracking-in-contract-bck-bottom {
+ 0% {
+   letter-spacing: 1em;
+   -webkit-transform: translateZ(400px) translateY(300px);
+           transform: translateZ(400px) translateY(300px);
+   opacity: 0;
+ }
+ 40% {
+   opacity: 0.6;
+ }
+ 100% {
+   -webkit-transform: translateZ(0) translateY(0);
+           transform: translateZ(0) translateY(0);
+   opacity: 1;
+ }
 }
