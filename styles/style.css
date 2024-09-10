@@ -218,6 +218,8 @@ header .right {
 .products {
     width: 100%;
     height: auto;
+   
+    margin-top: 2%;
 }
 
 .products h1 {
