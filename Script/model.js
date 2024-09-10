@@ -85,14 +85,22 @@ function sendWhatsAppMessage() {
         *Quantity:* ${quantity}
         *Total Price:* KSH ${totalPrice.toFixed(2)}
         *Product Image:* ${productImage}
+        
         *User Information:*
         *Name:* ${userName}
         *Mobile Number:* ${userMobile}
         *Location:* ${userLocation}
+        
+
+        PAYMENT  DETAILS :
+        PAYBIL 247247
+        ACC.. 0820177411438
+        ACC NAME  SAMMY  MATAYO :
+
         Looking forward to your response!
     
        Thank you ! for shopping with us at *Majesty Collections*.  We value your business and   we are here to assist with any further inquiries 😊`;
-    
+        
         const whatsappNumber = "254740045355"; 
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         setTimeout(function() {
