@@ -28,12 +28,14 @@ body{
     --light-color:  #333;
     --red-color: #ff1900;
     --green-color:  #06b10f;
-    --small-font-size:  0.9rem;
-    --medium-font-size:  1.2rem;
-    --larger-font-size:  1.5rem;
-    --large-font-size:  2rem;
 
-}
+        --small-font-size: 0.9rem;
+        --medium-font-size: 1.1rem;
+        --large-font-size: 1.4rem;
+        --xl-font-size: 2rem;
+    }
+
+
 body{
      font-size: normal;
      scroll-behavior: smooth;
@@ -1188,11 +1190,11 @@ nav ul li a:hover {
 }
 
 
-
 .featured {
-    padding: 40px 20px;
+    padding: 40px 10px;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: var(--large-font-size); /* Sleek font size */
 }
 
 .featured-container {
@@ -1200,10 +1202,14 @@ nav ul li a:hover {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 10px 0px;
 }
 
 .featured-item {
     width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+    font-size: var(--medium-font-size); /* Modern font size */
 }
 
 .featured-item img {
@@ -1216,13 +1222,12 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-
 .testimonials {
     padding: 60px 20px;
     text-align: center;
     background-color: #f9f9f9;
+    font-size: var(--large-font-size); /* Attractive font size */
 }
-
 
 .testimonial-container {
     display: flex;
@@ -1230,7 +1235,6 @@ nav ul li a:hover {
     gap: 30px;
     flex-wrap: wrap;
 }
-
 
 .testimonial-item {
     max-width: 540px;
@@ -1240,12 +1244,12 @@ nav ul li a:hover {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 40px;
     text-align: center;
     transition: transform 0.3s ease;
+    font-size: var(--medium-font-size); /* Sleek font size for testimonials */
 }
 
 .testimonial-item:hover {
     transform: translateY(-10px);
 }
-
 
 .testimonial-item img {
     width: 40px;
@@ -1255,22 +1259,19 @@ nav ul li a:hover {
     border: 2px solid #06b10f; 
 }
 
-
 .testimonial-item p {
-    font-size: var(--small-font-size);
+    font-size: var(--small-font-size); /* Sleek and readable font size for paragraphs */
     color: #333;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
-
 .testimonial-item h4 {
     font-size: var(--medium-font-size);
     font-weight: bold;
-    color: #ff1900; 
+    color: #ff1900; /* Bold and modern color for the heading */
     margin: 0;
 }
-
 
 .testimonial-item span {
     display: block;
