@@ -1194,7 +1194,8 @@ nav ul li a:hover {
     padding: 40px 10px;
     text-align: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    font-size: var(--large-font-size); /* Sleek font size */
+    font-size: var(--small-font-size); /* Sleek font size */
+    color: #201e1e;
 }
 
 .featured-container {
@@ -1262,7 +1263,7 @@ nav ul li a:hover {
 .testimonial-item p {
     font-size: var(--small-font-size); /* Sleek and readable font size for paragraphs */
     color: #333;
-    line-height: 1.6;
+    line-height: 1.2;
     margin-bottom: 15px;
 }
 
@@ -1276,7 +1277,7 @@ nav ul li a:hover {
 .testimonial-item span {
     display: block;
     font-size: 14px;
-    color: #999;
+    color: #333;
     margin-top: 5px;
 }
 
