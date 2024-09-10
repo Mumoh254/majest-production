@@ -1214,7 +1214,12 @@ nav ul li a:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    font-size: 0.6rem;
+   
+}
+
+.featured-item  .jordan{
+    font-size: 0.7rem;
+    color: #333;
 }
 
 .featured-item img {
@@ -1273,7 +1278,7 @@ nav ul li a:hover {
 }
 
 .testimonial-item p {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     color: #333;
 }
 
