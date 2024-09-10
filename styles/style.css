@@ -849,7 +849,7 @@ header .right {
 @media screen and (max-width: 768px) {
     .bottom-social-icons {
         width: 100%; /* Reduced width for smaller devices */
-        padding: 5px 70px;
+        padding: 8px 70px;
     }
 
     .icon {
@@ -857,8 +857,8 @@ header .right {
     }
 
     .icon img {
-        width: 24px; /* Smaller icon size for mobile devices */
-        height: 24px;
+        width: 26px; /* Smaller icon size for mobile devices */
+        height: 26px;
     }
 }
 
@@ -1010,10 +1010,10 @@ header .right {
     position: fixed;
     bottom: 60px;
     right: 20px;
-    display: none; /* Hidden by default */
+    display: none;
     width: 40px;
     height: 40px;
-    background-color: #ff1900; /* Red color for the button */
+    background-color: #ff1900; 
     color: white;
     text-align: center;
     line-height: 40px;
