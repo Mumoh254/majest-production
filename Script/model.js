@@ -85,7 +85,7 @@ function sendWhatsAppMessage() {
         *Quantity:* ${quantity}
         *Total Price:* KSH ${totalPrice.toFixed(2)}
         *Product Image:* ${productImage}
-        
+
         *User Information:*
         *Name:* ${userName}
         *Mobile Number:* ${userMobile}
@@ -101,7 +101,7 @@ function sendWhatsAppMessage() {
     
        Thank you ! for shopping with us at *Majesty Collections*.  We value your business and   we are here to assist with any further inquiries 😊`;
         
-        const whatsappNumber = "254740045355"; 
+        const whatsappNumber = "254114298441"; 
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         setTimeout(function() {
             // Hide the processing message after delay
