@@ -1340,14 +1340,14 @@ nav ul li a:hover {
 }
 
 #discountedPrice {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: #ff1900; 
   /* Green for discounted price */
-    font-weight: 900;
+    font-weight: 700;
 }
 
 #totalPrice {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #ff1900;  /* Green for total price */
     font-weight: 800;
 }
