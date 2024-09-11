@@ -409,7 +409,7 @@ header .right {
     }
 
     .products .box {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 25px;
     }
 
@@ -425,11 +425,11 @@ header .right {
     }
 
     .products .box .card .products_text h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .price {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
