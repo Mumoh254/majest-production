@@ -378,7 +378,7 @@ header .right {
     }
 
     .products .box .card .image img {
-        max-width: 100%;
+        max-width: 80%;
         height: 100% !important;
         object-fit: cover !important; /* Maintain image proportions */
     }
