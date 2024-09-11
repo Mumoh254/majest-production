@@ -263,7 +263,15 @@ html {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+
+
+    .modal-content {
+        width: 65%;
+        padding: 10px;
+        padding-bottom: 45%;
+    }
+
     .modal-details h2 {
         font-size: 1.5rem;
     }
