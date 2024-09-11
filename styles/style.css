@@ -1337,6 +1337,7 @@ nav ul li a:hover {
     color: #06b10f; 
   /* Red for original (crossed-out) price */
     font-weight: bold;
+   
 }
 
 #discountedPrice {
