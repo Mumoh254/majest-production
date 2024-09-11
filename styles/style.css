@@ -403,7 +403,7 @@ header .right {
 
 
 /* Tablet Responsiveness */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px)  {
     .products h1 {
         font-size: 2.2rem;
     }
