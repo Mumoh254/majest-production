@@ -138,3 +138,31 @@ body{
         font-size: 0.9rem;
     }
 }
+
+
+/* Ensure all sections have the same width */
+section {
+    width: 100%; /* You can change to a specific percentage or max-width */
+    max-width: 1200px; /* Optional: Limit the max width */
+    margin: 0 auto; /* Center the section */
+    padding: 20px; /* Add some padding */
+  }
+  
+  /* For inner content alignment */
+  .stats, .services, .categories, .featured, .testimonials {
+    display: flex;
+    justify-content: space-between; /* Evenly distribute items */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    gap: 20px; /* Adjust gap between items */
+  }
+  
+   .service-item, .category-item, .featured-item, .testimonial-item {
+    flex: 1; /* Equal width for each item */
+    min-width: 250px; /* Ensure they don't get too small */
+    text-align: center; /* Align content centrally */
+  }
+
+  .featured-container  {
+
+    width: 100%;
+  }
