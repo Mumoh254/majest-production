@@ -149,7 +149,7 @@ section {
   }
   
   /* For inner content alignment */
-  .stats, .services, .categories, .featured, .testimonials {
+   .services, .categories, .featured, .testimonials {
     display: flex;
     justify-content: space-between; /* Evenly distribute items */
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
