@@ -26,12 +26,13 @@ body{
     --light-color:  #333;
     --red-color: #ff1900;
     --green-color:  #06b10f;
-    --small-font-size:  0.8rem;
-    --medium-font-size:  1rem;
-    --larger-font-size:  1.5rem;
-    --large-font-size:  1.9rem;
 
-}
+        --small-font-size: 0.6rem;
+        --medium-font-size: 0.9rem;
+        --large-font-size: 1.2rem;
+        --xl-font-size: 1.5rem;
+    }
+
 body{
      font-size: normal;
      scroll-behavior: smooth;
@@ -61,7 +62,8 @@ body{
 .product-image {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
+  
 }
 
 .product-details {

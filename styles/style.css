@@ -274,6 +274,7 @@ header .right {
     justify-content: center;
    
    
+   
    width: 100%;
  
     overflow: hidden;
@@ -287,7 +288,7 @@ header .right {
     object-fit: contain; /* Keeps the image aspect ratio intact while covering the area */
     transition: transform 0.3s ease;
     object-fit: cover !important;
-    width: 60%;
+    width: 50%;
     height: 70%;
 }
 
