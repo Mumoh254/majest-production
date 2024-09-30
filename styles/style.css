@@ -288,8 +288,8 @@ header .right {
     object-fit: contain; /* Keeps the image aspect ratio intact while covering the area */
     transition: transform 0.3s ease;
     object-fit: cover !important;
-    width: 50%;
-    height: 70%;
+   
+    height: 70%  !important;
 }
 
 .products .box .card:hover .image img {
