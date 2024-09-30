@@ -288,6 +288,7 @@ header .right {
     transition: transform 0.3s ease;
     object-fit: cover !important;
     width: 60%;
+    height: 70%;
 }
 
 .products .box .card:hover .image img {
@@ -788,7 +789,7 @@ header .right {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 20% !important;
     width: 100%;

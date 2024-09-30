@@ -26,10 +26,10 @@ body{
     --light-color:  #333;
     --red-color: #ff1900;
     --green-color:  #06b10f;
-    --small-font-size:  1rem;
-    --medium-font-size:  1.3rem;
-    --larger-font-size:  1.7rem;
-    --large-font-size:  2rem;
+    --small-font-size:  0.8rem;
+    --medium-font-size:  1rem;
+    --larger-font-size:  1.5rem;
+    --large-font-size:  1.9rem;
 
 }
 body{
